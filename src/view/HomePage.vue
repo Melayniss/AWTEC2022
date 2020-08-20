@@ -117,7 +117,7 @@
             <div
               class="server-block wow slideInUp"
               onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
-              onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"
+              onmouseleave="this.style.color='#666';this.style.borderColor='#c4d7d6'"
             >
               <img class="center-block" :src="item.logo" alt="logo">
               <p class="text-center">{{item.title}}</p>
@@ -125,7 +125,7 @@
                 class="text-center"
                 v-html="item.content"
                 onmouseenter="this.style.color='#28f'"
-                onmouseleave="this.style.color='#ccc'"
+                onmouseleave="this.style.color='#c4d7d6'"
               ></div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default {
 }
 #bigData .bigData-title {
   padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #c4d7d6;
 }
 #bigData p {
   font-size: 14px;
@@ -450,7 +450,7 @@ export default {
 #customer .customer-logo img {
   width: 94px;
   height: 94px;
-  border: 1px solid #ccc;
+  border: 1px solid #c4d7d6;
 }
 #customer .customer-yh img {
   width: 34px;
@@ -479,8 +479,8 @@ export default {
 }
 #whyChooseUs .server-block {
   padding: 50px 20px;
-  border: 1px solid #ccc;
-  border-bottom: 5px solid #ccc;
+  border: 1px solid #c4d7d6;
+  border-bottom: 5px solid #c4d7d6;
 }
 #whyChooseUs .server-block img {
   width: 48px;
@@ -491,7 +491,7 @@ export default {
   margin: 30px 0;
 }
 #whyChooseUs .server-block > div {
-  color: #ccc;
+  color: #c4d7d6;
 }
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
@@ -564,8 +564,8 @@ export default {
   }
   #whyChooseUs .server-block {
     padding: 50px 0;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
+    border: 1px solid #c4d7d6;
+    border-bottom: 5px solid #c4d7d6;
   }
   #whyChooseUs .server-block img {
     width: 48px;
@@ -576,7 +576,7 @@ export default {
     margin: 30px 0;
   }
   #whyChooseUs .server-block > div {
-    color: #ccc;
+    color: #c4d7d6;
   }
 }
 
