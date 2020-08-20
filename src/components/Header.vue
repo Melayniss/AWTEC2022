@@ -4,14 +4,10 @@
     <!-- 头部顶部 -->
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
-        <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>888-888-888
-          <span class="glyphicon glyphicon-envelope"></span>liyunkun_11@163.com
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
+        <div class="pull-left">
+          <span class="glyphicon glyphicon-user"></span>Prof. Dahai ZHANG
+          <span class="glyphicon glyphicon-earphone"></span>13758255738
+          <span class="glyphicon glyphicon-envelope"></span>zhangdahai@zju.edu.cn
         </div>
       </div>
     </div>
@@ -84,31 +80,31 @@ export default {
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "首页",
+      menuName: "NavigationBar",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
-          name: "首页",
+          name: "Home",
           path: "/",
           children: []
         },
         {
-          name: "软件产品",
-          path: "/software",
+          name: "Committee",
+          path: "/committee",
           children: [
             {
-              name: "智能小镇管理系统",
-              path: "/software/smartTown"
+              name: "Local Committees",
+              path: "/committee/local"
             },
             {
-              name: "大数据管理系统",
-              path: "/software/bigData"
+              name: "Board or Other",
+              path: "/committee/board"
             }
           ]
         },
         {
-          name: "相关服务",
-          path: "/service",
+          name: "Routine",
+          path: "/routine",
           children: []
         },
         {
@@ -161,7 +157,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  background: #474747;
+  background: #134857;
 }
 /* 顶部的图标 */
 #header .header-top span {
@@ -223,7 +219,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #1e73be;
+  background-color: #93b5cf;
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -232,7 +228,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #1e73be;
+  color: #93b5cf;
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -247,9 +243,9 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #1e73be;
+  color: #93b5cf;
   text-decoration: none;
-  border-bottom: 2px solid #1e73be;
+  border-bottom: 2px solid #93b5cf;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
 #header .header-nav .header-nav-wrapper > li > dl {
@@ -259,14 +255,14 @@ export default {
   top: 80%;
   left: 0;
   z-index: 999999;
-  box-shadow: 0 0 3px 1px #ccc;
+  box-shadow: 0 0 3px 1px #c4d7d6;
   background: #fff;
 }
 /* 导航栏 每个导航下面的二级导航容器的每个导航 */
 #header .header-nav .header-nav-wrapper > li > dl > dt {
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #c4d7d6;
 }
 /* 导航栏 每个导航下面的二级导航容器的每个导航 当鼠标滑上时的样式*/
 #header .header-nav .header-nav-wrapper > li > dl > dt > a:hover {
@@ -278,7 +274,7 @@ export default {
 }
 #header .header-nav .header-nav-wrapper > li > dl > dt:hover {
   cursor: pointer;
-  background: #ccc;
+  background: #c4d7d6;
 }
 @media screen and (max-width: 997px) {
   #header .header-nav-m {
@@ -306,7 +302,7 @@ export default {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #474747;
+    background: #134857;
     position: relative;
   }
   /* 导航栏 菜单图标 */
@@ -327,14 +323,14 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #474747;
+    background: #134857;
     z-index: 9999999;
   }
   /* 导航栏 每个导航 */
   #header .header-nav-m .header-nav-m-wrapper > li {
     height: 40px;
     line-height: 40px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #c4d7d6;
   }
   /* 导航栏 每个导航下面的 a 链接 */
   #header .header-nav-m .header-nav-m-wrapper > li > a {

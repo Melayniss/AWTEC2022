@@ -98,12 +98,12 @@ export default {
     border: 1px solid #333;
 }
 .nav>a.active{
-    color: #1e73be;
-    border-color: #1e73be;
+    color: #93b5cf;
+    border-color: #93b5cf;
 }
 .nav>a:hover{
-    color: #1e73be;
-    border-color: #1e73be;
+    color: #93b5cf;
+    border-color: #93b5cf;
 }
 .news-container{
     overflow: hidden;
@@ -119,8 +119,8 @@ export default {
     border-right: 1px solid transparent;
 }
 .news-container>li:hover{
-    color: #1e73be;
-    border: 1px solid #1e73be;
+    color: #93b5cf;
+    border: 1px solid #93b5cf;
     cursor: pointer;
 }
 .news-container>li:nth-of-type(2n){

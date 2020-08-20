@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 Vue.use(Router)
 
 export default new Router({
@@ -7,7 +8,8 @@ export default new Router({
     {
       path: '*',
       redirect: '/'
-    }, {
+    },
+    {
       path: '/',
       name: 'PageView',
       component: resolve => require(['@/view/PageView'], resolve),
@@ -90,7 +92,7 @@ export default new Router({
         {
           path: '/servicedetail',
           name: 'servicedetail',
-          component: resolve => require(['@/view/ServiceDetail'],resolve),
+          component: resolve => require(['@/view/ServiceDetail'], resolve),
           meta: {
             title: '相关服务'
           }
