@@ -15,7 +15,7 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png">
+        <img src="@/assets/img/logo_column@0,25x.png">
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -41,7 +41,7 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logo_black.png" alt="logo">
+        <img class="center-block" src="@/assets/img/logo_column@0,25x.png" alt="logo">
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "NavigationBar",
+      menuName: "Home",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
@@ -108,23 +108,40 @@ export default {
           children: []
         },
         {
-          name: "新闻动态",
-          path: "/newsinformation",
+          name: "Speaker",
+          path: "/speaker",
           children: []
         },
         {
-          name: "公司介绍",
-          path: "/companyintroduction",
+          name: "Preparation",
+          path: "/preparation",
+          children: [
+            {
+              name: "Accommodation",
+              path: "/preparation/accommodation"
+            },
+            {
+              name: "Route",
+              path: "/preparation/route"
+            },
+            {
+              name: "FAQ",
+              path: "/preparation/faq"
+            },
+            {
+              name: "Contact Us",
+              path: "/preparation/contact"
+            },
+          ]
+        },
+        {
+          name: "Sponsorship",
+          path: "/sponsorship",
           children: []
         },
         {
-          name: "工作机会",
-          path: "/jobchance",
-          children: []
-        },
-        {
-          name: "联系我们",
-          path: "/contactus",
+          name: "Log in",
+          path: "/login",
           children: []
         }
       ]
@@ -176,8 +193,8 @@ export default {
 }
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 95px;
-  height: 45px;
+  width: 215px;
+  height: 75px;
   position: absolute;
   top: 0;
   left: 0;
@@ -185,6 +202,8 @@ export default {
   bottom: 0;
   margin: auto;
 }
+/*暂时如此 logo摆放位置还有待修改*/
+
 /* 导航栏 导航容器 */
 #header .header-nav-fixed .header-nav-wrapper {
   line-height: 50px;
@@ -282,13 +301,13 @@ export default {
   }
   /* 导航栏logo容器 */
   #header .header-nav-m .header-nav-m-logo {
-    height: 80px;
+    height: 100px;
     position: relative;
   }
   /* 导航栏logo图片 */
   #header .header-nav-m .header-nav-m-logo img {
-    width: 95px;
-    height: 45px;
+    width: 215px;
+    height: 75%;
     position: absolute;
     top: 0;
     left: 0;
