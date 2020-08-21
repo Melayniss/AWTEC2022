@@ -3,17 +3,17 @@
     <div class="logo">
       <img src="@/assets/img/logo_white.png" alt="logo图">
     </div>
-    <p class="title">公司企业网站模板</p>
+    <p class="title">AWTEC 2022 in Hang Zhou</p>
     <p class="address_tel_fax">
-      <span>地址：公司地址公司地址公司地址公司地址</span>
-      <span>Tel：888-888-888</span>
-      <span>Fax：8888-88888888</span>
+      <span>Address: Dragon Hotel</span>
+      <span>Tel: 888-888-888</span>
+      <span>WeChat: 8888-88888888</span>
     </p>
     <p class="email_wx">
-      <span>邮箱：liyunkun_11@163.com</span>
-      <span>公司微信号：ilyk_gg</span>
+      <span>E-mail: zhangdahai@zju.edu.cn</span>
+      <span>Facebook: To be fulfill</span>
     </p>
-    <p class="copy">Copyright &copy; 2018 - 2019 公司名称公司名称</p>
+    <p class="copyright">Copyright &copy; 2018 - 2019 Melayniss</p>
   </div>
 </template>
 <script>
@@ -51,7 +51,7 @@ export default {
   color: #d3d3d3;
   font-size: 14px;
 }
-.copy {
+.copyright {
   color: #d3d3d3;
   font-size: 14px;
   margin: 50px 0 10px;
@@ -67,7 +67,7 @@ export default {
 
   font-size: 12px;
 }
-.copy {
+.copyright {
   font-size: 12px;
   margin: 30px 0 10px;
 }
