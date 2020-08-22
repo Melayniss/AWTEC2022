@@ -1,9 +1,9 @@
 <template>
   <div id="footer" class="container-fluid">
     <div class="logo">
-      <img src="@/assets/img/logo_white.png" alt="logo图">
+      <img src="@/assets/img/logo_column_white@0,25x.png" alt="logo">
     </div>
-    <p class="title">AWTEC 2022 in Hang Zhou</p>
+    <p class="title">Contact Us in following ways</p>
     <p class="address_tel_fax">
       <span>Address: Dragon Hotel</span>
       <span>Tel: 888-888-888</span>
@@ -34,10 +34,10 @@ export default {
   text-align: center;
 }
 .logo {
-  width: 95px;
-  height: 45px;
-  margin: 50px auto 20px;
+  margin: 40px auto 20px;
+  display: inline-block;
 }
+/*图片如果要符合父元素的text-align属性，则其display属性值应当设置为inline-block*/
 .title {
   font-size: 25px;
   margin-bottom: 20px;

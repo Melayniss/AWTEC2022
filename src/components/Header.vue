@@ -22,7 +22,7 @@
         <li
           v-for="(item,index) in navList"
           :key="index"
-          :class="index==navIndex?'active':''"
+          :class="index===navIndex?'active':''"
           @click="navClick(index,item.name)"
         >
           <router-link :to="item.path">
@@ -59,7 +59,7 @@
           <li
             v-for="(item,index) in navList"
             :key="index"
-            :class="index==navIndex?'active':''"
+            :class="index===navIndex?'active':''"
             @click="navClick(index,item.name)"
             data-toggle="collapse"
             data-target="#menu"
@@ -154,7 +154,7 @@ export default {
       this.menuName = name;
     },
     menuClick() {
-      if (this.menuClass == "glyphicon glyphicon-menu-down") {
+      if (this.menuClass === "glyphicon glyphicon-menu-down") {
         this.menuClass = "glyphicon glyphicon-menu-up";
       } else {
         this.menuClass = "glyphicon glyphicon-menu-down";
