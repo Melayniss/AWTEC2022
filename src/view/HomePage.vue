@@ -26,7 +26,7 @@
     <div id="getHere" class="container-fuild">
       <div class="row bigData-container">
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" src="@/assets/img/img1.png" alt="大数据管理系统">
+          <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="getHere-title">
@@ -46,7 +46,7 @@
               Dragon Hotel, in Hang Zhou
             </a>
           </h2>
-          <a href="#" class="btn btn-lg btn-block btn-info">联系我们</a>
+          <a href="#" class="btn btn-lg btn-block btn-info">Get Here</a>
         </div>
       </div>
     </div>

@@ -1,5 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import PageView from "../view/PageView";
+import Contact_us from "../view/ContactUs";
+import HomePage from "../view/HomePage";
+import Committee from "../view/Committee";
+import Committee_local from "../view/Committee_local";
+import Committee_board from "../view/Committee_board";
+import Routine from "../view/Routine";
+import Speaker from "../view/Speaker";
+import Preparation from "../view/Preparation";
+import Accommodation from "../view/Accommodation";
+import Route from "../view/Route";
+import FAQ from "../view/FAQ";
+import Sponsorship from "../view/Sponsorship";
+import Login from "../view/Login";
+
+// const Committee = () => import("../view/Committee")
+// const Committee_local = () => import("../view/Committee_local")
 
 Vue.use(Router)
 
@@ -11,92 +28,123 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'PageView',
-      component: resolve => require(['@/view/PageView'], resolve),
+      name: 'Home',
+      component: HomePage,
       children: [
         {
           path: '/',
           redirect: '/home'
-        }, {
+        },
+        {
           path: '/home',
-          name: 'home',
-          component: resolve => require(['@/view/HomePage'], resolve),
+          name: 'Home',
+          component: HomePage,
           meta: {
-            title: '首页'
-          }
-        }, {
-          path: '/software',
-          name: 'software',
-          component: resolve => require(['@/view/Software'], resolve),
-          meta: {
-            title: '软件产品'
-          },
-          children: [
-            {
-              path: '/software',
-              redirect: '/software/smartTown'
-            },
-            {
-              path: '/software/smartTown',
-              name: 'software',
-              component: resolve => require(['@/view/Software_smartTown'], resolve),
-              meta: {
-                title: '软件产品丨智能小镇管理系统'
-              }
-            },
-            {
-              path: '/software/bigData',
-              name: 'software',
-              component: resolve => require(['@/view/Software_bigData'], resolve),
-              meta: {
-                title: '软件产品丨大数据管理系统'
-              }
-            }
-          ]
-        }, {
-          path: '/service',
-          name: 'service',
-          component: resolve => require(['@/view/Service'], resolve),
-          meta: {
-            title: '相关服务'
-          }
-        }, {
-          path: '/newsinformation',
-          name: 'newsinformation',
-          component: resolve => require(['@/view/NewsInformation'], resolve),
-          meta: {
-            title: '新闻动态'
-          }
-        }, {
-          path: '/companyintroduction',
-          name: 'companyintroduction',
-          component: resolve => require(['@/view/CompanyIntroduction'], resolve),
-          meta: {
-            title: '公司介绍'
-          }
-        }, {
-          path: '/jobchance',
-          name: 'jobchance',
-          component: resolve => require(['@/view/JobChance'], resolve),
-          meta: {
-            title: '工作机会'
-          }
-        }, {
-          path: '/contactus',
-          name: 'contactus',
-          component: resolve => require(['@/view/ContactUs'], resolve),
-          meta: {
-            title: '联系我们'
+            title: 'Home'
           }
         },
         {
-          path: '/servicedetail',
-          name: 'servicedetail',
-          component: resolve => require(['@/view/ServiceDetail'], resolve),
+          path: '/committee',
+          name: 'Committee',
+          component: Committee,
           meta: {
-            title: '相关服务'
+            title: 'Committee'
+          },
+          children: [
+            {
+              path: '/committee',
+              redirect: '/committee/local'
+            },
+            {
+              path: '/committee/local',
+              name: 'Committee',
+              component: Committee_local,
+              meta: {
+                title: 'Local Committee'
+              }
+            },
+            {
+              path: '/committee/board',
+              name: 'Committee_board',
+              component: Committee_board,
+              meta: {
+                title: 'Board or Other Committees'
+              }
+            }
+          ]
+        },
+        {
+          path: '/routine',
+          name: 'Routine',
+          component: Routine,
+          meta: {
+            title: 'Routine'
           }
-        }
+        },
+        {
+          path: '/speaker',
+          name: 'Speaker',
+          component: Speaker,
+          meta: {
+            title: 'Speaker'
+          }
+        },
+        {
+          path: '/preparation',
+          name: 'Preparation',
+          component: Preparation,
+          children: [
+            {
+              path: '/preparation/accommodation',
+              name: 'Accommodation',
+              component: Accommodation,
+              meta: {
+                title: 'Accommodation'
+              }
+            },
+            {
+              path: '/preparation/route',
+              name: 'Route',
+              component: Route,
+              meta: {
+                title: 'Accommodation'
+              }
+            },
+            {
+              path: '/preparation/faq',
+              name: 'FAQ',
+              component: FAQ,
+              meta: {
+                title: 'FAQ'
+              }
+            },
+            {
+              path: '/preparation/contact',
+              name: 'Contact Us',
+              component: Contact_us,
+              meta: {
+                title: 'Contact Us'
+              },
+            },
+          ]
+        },
+        {
+          path: '/sponsorship',
+          name: 'Sponsorship',
+          component: Sponsorship,
+          meta: {
+            title: 'Sponsorship'
+          }
+        },
+        // {
+        //   path: '/login',
+        //   name: 'Log in',
+        //   component: Login,
+        //   meta: {
+        //     title: 'Log in'
+        //   }
+        // },
+        // Wait to fulfill this part
       ]
     }
   ]
