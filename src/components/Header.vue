@@ -5,7 +5,7 @@
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="pull-left">
-          <span class="glyphicon glyphicon-user"></span>Prof. Dahai ZHANG
+          <span class="glyphicon glyphicon-user"></span>Contact us by
           <span class="glyphicon glyphicon-earphone"></span>13758255738
           <span class="glyphicon glyphicon-envelope"></span>zhangdahai@zju.edu.cn
         </div>
@@ -139,11 +139,12 @@ export default {
           path: "/sponsorship",
           children: []
         },
-        {
-          name: "Log in",
-          path: "/login",
-          children: []
-        }
+        // {
+        //   name: "Log in",
+        //   path: "/login",
+        //   children: []
+        // },
+        // Wait to fulfill this part
       ]
     };
   },
