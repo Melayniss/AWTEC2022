@@ -25,6 +25,7 @@
     <!-- 大数据管理系统 -->
     <div id="getHere" class="container-fuild">
       <div class="row bigData-container">
+<!--        here needs fix. Write container box-->
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">
         </div>
@@ -68,10 +69,11 @@
         </div>
       </div>
     </div>
-    <!-- 客户评价 -->
+    <!-- Speakers -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
+        <p class="customer-title text-center">Speakers</p>
+<!--        Here is the way to code the xml in function.-->
         <div class="swiper-container customer-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div
