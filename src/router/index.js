@@ -107,7 +107,7 @@ export default new Router({
               name: 'Route',
               component: Route,
               meta: {
-                title: 'Accommodation'
+                title: 'Route'
               }
             },
             {

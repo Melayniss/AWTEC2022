@@ -22,7 +22,7 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
-    <!-- 大数据管理系统 -->
+    <!-- Venue -->
     <div id="getHere" class="container-fuild">
       <div class="row bigData-container">
         <!--        here needs fix. Write container box-->
@@ -46,7 +46,7 @@
               Dragon Hotel, in Hang Zhou
             </a>
           </h2>
-          <a href="#" class="btn btn-lg btn-block btn-info">Get Here</a>
+          <a href="#/preparation/route" class="btn btn-lg btn-block btn-info">Get Here</a>
         </div>
       </div>
     </div>
@@ -160,27 +160,27 @@
           {
             img: require("@/assets/img/scene_3.jpg"),
             path: "",
+            title: 'AWTEC 2022',
+            content: 'We propose the plan of 6th AWTEC to be held at Hangzhou city in China on September 11-15 of 2022.',
+          },
+		  {
+            img: require("@/assets/img/scene_6.jpg"),
+            path: "",
             title: 'Hang Zhou',
-            content: 'The capital and the most popular city of Zhejiang Province in China.',
+            content: 'Also romanized as Hangchow, is the capital and the most popular city of Zhejiang Province in China.',
           },
+		  {
+		    img: require("@/assets/img/zju_4.jpg"),
+		    path: "",
+		    title: 'Zhe Jiang University',
+		    content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
+		  },
           {
-            img: require("@/assets/img/accomplishment_1.jpg"),
+            img: require("@/assets/img/zju_3.jpg"),
             path: "",
-            title: '您身边的IT专家1',
-            content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+            title: 'Ocean College',
+            content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
           },
-          {
-            img: require("@/assets/img/zju_1.jpg"),
-            path: "",
-            title: 'Zhe Jiang University',
-            content: 'A comprehensive university ranks among the top 3 on Chinese mainland and within the top 100 in the Times Higher Education World Reputation Rankings and QS World University Rankings currently.',
-          },
-          {
-            img: require("@/assets/img/scene_4.jpg"),
-            path: "",
-            title: '您身边的IT专家4',
-            content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
-          }
         ],
         customerList: [
           {
@@ -356,7 +356,7 @@
     width: 100%;
   }
 
-  /* 轮播图 */
+  /* swiper image */
   #rotation {
     height: 600px;
   }
@@ -390,7 +390,7 @@
 
   #rotation .banner-swiper .swiper-slide-title > h1 {
     font-size: 50px;
-    margin-top: 12%;
+    margin-top: 15%;
   }
 
   #rotation .banner-swiper .swiper-slide-title > p {
