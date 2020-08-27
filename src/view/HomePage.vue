@@ -25,24 +25,23 @@
     <!-- 大数据管理系统 -->
     <div id="getHere" class="container-fuild">
       <div class="row bigData-container">
-<!--        here needs fix. Write container box-->
+        <!--        here needs fix. Write container box-->
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="getHere-title">
-            Location
+            Conference Venue
             <small>/ Dragon Hotel, in Hang Zhou</small>
           </h2>
-          <p>The conference venue will be at the Dragon Hotel in Hangzhou, which is the one of the best choices for
-            travellers around the world to visit Hangzhou. The hotel has ideal location in the heart of Hangzhou's
+          <p>The Dragon Hotel in Hangzhou is the one of the best choices for travellers around the world to visit
+            Hangzhou. The hotel has ideal location in the heart of Hangzhou's
             central business district. Close to splendid shopping, and major corporate and government offices, The
             Dragon is also on the doorstep of some of China's most revered cultural landmarks. The hotel faces the
             stunning Baoshi Mountain and is a short walk from historic and picturesque West Lake.</p>
           <p>Address: 120 Shuguang Road, Hangzhou, China, 310007</p>
           <p>Tel: (86) 400 862 5688</p>
-          <p>Website: http://www.thedragonshotel.com/en/the_dragon.htm</p>
-          <h2 class="bigData-device">
+          <h2 class="getHere-link">
             <a href="http://hangzhoudragonhotel.com/">
               Dragon Hotel, in Hang Zhou
             </a>
@@ -51,16 +50,17 @@
         </div>
       </div>
     </div>
-    <!-- 您身边的IT专家 -->
+    <!-- Contacts -->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>您身边的IT专家</h1>
-        <h3>7x24小时提供出色的IT服务</h3>
+        <h1>Local Committee</h1>
+        <h3>ZJU Prof. Zhang</h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
           onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
-        >联系我们
+        >
+          Contact Us
         </button>
         <div class="contactUs-contactWay">
           <span></span>
@@ -73,7 +73,7 @@
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
         <p class="customer-title text-center">Speakers</p>
-<!--        Here is the way to code the xml in function.-->
+        <!--        Here is the way to code the xml in function.-->
         <div class="swiper-container customer-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div
@@ -85,7 +85,7 @@
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
               <div class="customer-yh">
-                <img src="@/assets/img/yinhao.png" alt="引号">
+                <img src="@/assets/img/quote.png" alt="引号">
               </div>
               <div class="customer-content1">
                 <small>{{item.content}}</small>
@@ -103,7 +103,7 @@
               <img class="center-block" :src="item.logo" alt="logo">
             </div>
             <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号">
+              <img src="@/assets/img/quote.png" alt="引号">
             </div>
             <div class="customer-content1">
               <small>{{item.content}}</small>
@@ -158,22 +158,22 @@
       return {
         swiperList: [
           {
-            img: require("@/assets/img/scene_1.jpg"),
+            img: require("@/assets/img/scene_3.jpg"),
+            path: "",
+            title: 'Hang Zhou',
+            content: 'The capital and the most popular city of Zhejiang Province in China.',
+          },
+          {
+            img: require("@/assets/img/accomplishment_1.jpg"),
             path: "",
             title: '您身边的IT专家1',
             content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
           },
           {
-            img: require("@/assets/img/scene_2.jpg"),
+            img: require("@/assets/img/zju_1.jpg"),
             path: "",
-            title: '您身边的IT专家2',
-            content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
-          },
-          {
-            img: require("@/assets/img/scene_3.jpg"),
-            path: "",
-            title: '您身边的IT专家3',
-            content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+            title: 'Zhe Jiang University',
+            content: 'A comprehensive university ranks among the top 3 on Chinese mainland and within the top 100 in the Times Higher Education World Reputation Rankings and QS World University Rankings currently.',
           },
           {
             img: require("@/assets/img/scene_4.jpg"),
@@ -417,7 +417,7 @@
     line-height: 2rem;
   }
 
-  #getHere .bigData-device {
+  #getHere .getHere-link {
     margin: 50px 0 20px;
   }
 
@@ -426,6 +426,7 @@
     color: #fff;
     height: 400px;
     background: url("../assets/img/contact_us_bg.jpg") 0 0 no-repeat;
+    /*use which photo?*/
     background-size: 100% 100%;
     transition: all ease 0.6s;
   }
@@ -553,7 +554,7 @@
       font-size: 20px;
     }
 
-    #getHere .bigData-device {
+    #getHere .getHere-link {
       font-size: 20px;
       margin: 10px 0 10px;
     }
@@ -661,7 +662,7 @@
       font-size: 30px;
     }
 
-    #getHere .bigData-device {
+    #getHere .getHere-link {
       font-size: 30px;
       margin: 30px 0 15px;
     }
@@ -704,4 +705,3 @@
     }
   }
 </style>
-
