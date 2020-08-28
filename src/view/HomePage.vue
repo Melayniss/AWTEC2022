@@ -69,63 +69,63 @@
         </div>
       </div>
     </div>
-    <!-- Speakers -->
-    <div id="customer" class="container-fuild">
-      <div class="container customer-container">
-        <p class="customer-title text-center">Speakers</p>
+    <!-- Committee -->
+    <div id="committee" class="container-fuild">
+      <div class="container committee-container">
+        <p class="committee-title text-center">Local Committee</p>
         <!--        Here is the way to code the xml in function.-->
-        <div class="swiper-container customer-swiper hidden-xs">
+        <div class="swiper-container committee-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div
-              class="swiper-slide customer-block"
-              v-for="(item,index) in customerList"
+              class="swiper-slide committee-block"
+              v-for="(item,index) in committeeList"
               :key="index"
             >
-              <div class="customer-logo">
+              <div class="committee-logo">
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
-              <div class="customer-yh">
+              <div class="committee-yh">
                 <img src="@/assets/img/quote.png" alt="引号">
               </div>
-              <div class="customer-content1">
+              <div class="committee-content1">
                 <small>{{item.content}}</small>
               </div>
-              <div class="customer-content2">{{item.title}}</div>
+              <div class="committee-content2">{{item.title}}</div>
             </div>
           </div>
           <!-- 如果需要导航按钮 -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-        <div class="row visible-xs customer-block">
-          <div class="col-xs-12" v-for="(item,index) in customerList" :key="index">
-            <div class="customer-logo">
+        <div class="row visible-xs committee-block">
+          <div class="col-xs-12" v-for="(item,index) in committeeList" :key="index">
+            <div class="committee-logo">
               <img class="center-block" :src="item.logo" alt="logo">
             </div>
-            <div class="customer-yh">
+            <div class="committee-yh">
               <img src="@/assets/img/quote.png" alt="引号">
             </div>
-            <div class="customer-content1">
+            <div class="committee-content1">
               <small>{{item.content}}</small>
             </div>
-            <div class="customer-content2">
+            <div class="committee-content2">
               <small>{{item.title}}</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- 为什么选择我们 -->
-    <div id="whyChooseUs" class="conatiner-fuild">
+    <!-- The benifit -->
+    <div id="benefits" class="container-fuild">
       <div class="container">
-        <div class="whyChooseUs-title text-center">
-          <p>为什么选择我们的服务</p>
-          <p>THE REASON TO CHOOSING US</p>
+        <div class="benefits-title text-center">
+          <p>AWTEC 2022</p>
+          <p>Deliver the most recent and future development.</p>
         </div>
         <div class="row">
           <div
             class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
-            v-for="(item,index) in serverList"
+            v-for="(item,index) in benefitsList"
             :key="index"
           >
             <div
@@ -156,6 +156,7 @@
     name: "HomePage",
     data() {
       return {
+        // photograph
         swiperList: [
           {
             img: require("@/assets/img/scene_3.jpg"),
@@ -182,112 +183,113 @@
             content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
           },
         ],
-        customerList: [
+        // the local committee
+        committeeList: [
           {
-            logo: require("@/assets/img/logo_hp.png"),
+            logo: require("@/assets/img/local_0.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Prof. Dahai ZHANG, Zhejiang University",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "An outstanding young scientist in the field of ocean science and technology. Served as the deputy secretary general of the Ocean Technology and Equipment Committee of the China Ocean Society, the member of the Ocean Renewable Energy System Committee of the CCICED."
           },
           {
-            logo: require("@/assets/img/logo_kk.png"),
+            logo: require("@/assets/img/local_1.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Prof. Wei LI, Zhejiang University",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "The executive director of China Renewable Energy Society, director of the Special Committee of Ocean Energy, the expert judge of mechanical subject of the National Natural Science Foundation of China. Having more than 60 authorized invention patents at home and abroad."
           },
           {
-            logo: require("@/assets/img/logo_toyota.png"),
+            logo: require("@/assets/img/local_2.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Dr. Yulin SI, Zhejiang University",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "Mainly engaged in the research on offshore wind energy and marine energy, marine equipment intelligent control etc. He has been the PI for projects from Natural Science Foundation of China, China Shipbuilding Industry Corporation etc."
           },
           {
-            logo: require("@/assets/img/logo_kk.png"),
+            logo: require("@/assets/img/local_3.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Dr. Lin CUI, National Ocean Technology Center",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "Dr. Cui from National Ocean Technology Center, is the deputy director of the ocean energy research office in National Ocean Technology Center. He is mainly engaged in the R&D and policy studies of ocean wave and tidal energy and their development in China."
           },
           {
-            logo: require("@/assets/img/logo_hp.png"),
+            logo: require("@/assets/img/local_4.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Prof. Dezhi NING, Dalian University of Technology",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "Mainly engaged in the research on the characteristics of water waves and the interaction between water waves and ocean structures. Ppublished more than 140 academic papers in well-known journals and international conferences at home and abroad."
           },
           {
-            logo: require("@/assets/img/logo_toyota.png"),
+            logo: require("@/assets/img/local_5.jpg"),
             title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+              "Prof. Hongda SHI, Ocean University of China",
             content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+              "The dean of Engineering College, Ocean University of China. Mainly engaged in the research on ocean environment hydrodynamics, ocean renewable energy utilization and practical technology development, has been the PI for over 10 scientific research projects."
           },
-          {
-            logo: require("@/assets/img/logo_kk.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          },
-          {
-            logo: require("@/assets/img/logo_hp.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          },
-          {
-            logo: require("@/assets/img/logo_toyota.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          },
-          {
-            logo: require("@/assets/img/logo_hp.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          },
-          {
-            logo: require("@/assets/img/logo_kk.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          },
-          {
-            logo: require("@/assets/img/logo_hp.png"),
-            title:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-            content:
-              "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          }
+          // {
+          //   logo: require("@/assets/img/local_0.jpg"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // },
+          // {
+          //   logo: require("@/assets/img/logo_hp.png"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // },
+          // {
+          //   logo: require("@/assets/img/logo_toyota.png"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // },
+          // {
+          //   logo: require("@/assets/img/logo_hp.png"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // },
+          // {
+          //   logo: require("@/assets/img/logo_kk.png"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // },
+          // {
+          //   logo: require("@/assets/img/logo_hp.png"),
+          //   title:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          //   content:
+          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+          // }
         ],
-        serverList: [
+        benefitsList: [
           {
             logo: require("@/assets/img/tel.png"),
-            title: "核心优势1",
-            content: "<p>由专业客服提供人工服务</p>负责疑难问题和故障受理"
+            title: "Date & Location",
+            content: "<p>On September 11-15 of 2022</p>At Hangzhou city in China"
           },
           {
             logo: require("@/assets/img/computer.png"),
-            title: "核心优势2",
-            content: "<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障"
+            title: "Conference Speakers",
+            content: "<p>Five keynote speakers</p>Four invited speakers"
           },
           {
             logo: require("@/assets/img/qq.png"),
-            title: "核心优势3",
-            content: "<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障"
+            title: "Special Tours Planned",
+            content: "<p>The ZJU Zhoushan Campus</p>Zhairuoshan Scientific Island"
           },
           {
             logo: require("@/assets/img/skill.png"),
-            title: "核心优势4",
-            content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
+            title: "Regular or Student",
+            content: "<p>650 USD (about 4652 CNY)</p>300 USD (about 2147 CNY)"
           }
         ]
       };
@@ -317,11 +319,13 @@
         lazy: {
           loadPrevNext: true
         },
-        observer: true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true //修改swiper的父元素时，自动初始化swiper
+        observer: true,
+        //修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true
+        //修改swiper的父元素时，自动初始化swiper
       });
-      /* customer-swiper */
-      new Swiper(".customer-swiper", {
+      /* committee-swiper */
+      new Swiper(".committee-swiper", {
         loop: true, // 循环模式选项
         slidesPerView: 3,
         //自动播放
@@ -335,8 +339,10 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-        observer: true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true //修改swiper的父元素时，自动初始化swiper
+        observer: true,
+        //修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true
+        //修改swiper的父元素时，自动初始化swiper
       });
       /* wowjs动画 */
       var wow = new WOW({
@@ -464,79 +470,79 @@
   }
 
   /* 客户评价 */
-  #customer {
+  #committee {
     padding: 50px 0;
     box-sizing: border-box;
     background: #efefef;
     transition: all ease 0.6s;
   }
 
-  #customer .customer-title {
+  #committee .committee-title {
     font-size: 30px;
     color: rgb(102, 102, 102);
     margin: 0 0 30px;
   }
 
-  #customer .customer-block {
+  #committee .committee-block {
     background: #fff;
     padding: 30px;
   }
 
-  #customer .customer-logo img {
+  #committee .committee-logo img {
     width: 94px;
-    height: 94px;
+    height: 125px;
     border: 1px solid #c4d7d6;
   }
 
-  #customer .customer-yh img {
+  #committee .committee-yh img {
     width: 34px;
     height: 34px;
   }
 
-  #customer .customer-content1 {
+  #committee .committee-content1 {
     padding-bottom: 20px;
     border-bottom: 1px solid #0ce9f1;
   }
 
-  #customer .customer-content2 {
+  #committee .committee-content2 {
     padding-top: 20px;
   }
 
-  /* 为什么选择我们 */
-  #whyChooseUs {
+  /* What we have */
+  #benefits {
     padding: 100px;
   }
 
-  #whyChooseUs .whyChooseUs-title {
+  #benefits .benefits-title {
     margin-bottom: 50px;
   }
 
-  #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
+  #benefits .benefits-title p:nth-of-type(1) {
     font-size: 25px;
     font-weight: 500;
   }
 
-  #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
+  #benefits .benefits-title p:nth-of-type(2) {
     font-size: 14px;
   }
 
-  #whyChooseUs .server-block {
+  #benefits .server-block {
     padding: 50px 20px;
     border: 1px solid #c4d7d6;
     border-bottom: 5px solid #c4d7d6;
   }
 
-  #whyChooseUs .server-block img {
+  #benefits .server-block img {
     width: 48px;
     height: 48px;
   }
 
-  #whyChooseUs .server-block > p {
+  #benefits .server-block > p {
     font-size: 20px;
     margin: 30px 0;
   }
 
-  #whyChooseUs .server-block > div {
+  #benefits .server-block > div {
     color: #c4d7d6;
   }
 
@@ -589,61 +595,61 @@
       margin: 10px;
     }
 
-    #customer {
+    #committee {
       padding: 30px 0;
       box-sizing: border-box;
       background: #fff;
     }
 
-    #customer .customer-title {
+    #committee .committee-title {
       font-size: 16px;
       font-weight: bold;
     }
 
-    #customer .customer-logo img {
+    #committee .committee-logo img {
       width: 48px;
       height: 48px;
     }
 
-    #customer .customer-block {
+    #committee .committee-block {
       padding: 30px;
     }
 
-    #customer .customer-block > div {
+    #committee .committee-block > div {
       padding: 30px 0;
     }
 
-    #whyChooseUs {
+    #benefits {
       padding: 20px 0;
       transition: all ease 0.6s;
     }
 
-    #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
+    #benefits .benefits-title p:nth-of-type(1) {
       font-size: 20px;
       font-weight: 700;
     }
 
-    #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
+    #benefits .benefits-title p:nth-of-type(2) {
       font-size: 12px;
     }
 
-    #whyChooseUs .server-block {
+    #benefits .server-block {
       padding: 50px 0;
       border: 1px solid #c4d7d6;
       border-bottom: 5px solid #c4d7d6;
     }
 
-    #whyChooseUs .server-block img {
+    #benefits .server-block img {
       width: 48px;
       height: 48px;
     }
 
-    #whyChooseUs .server-block > p {
+    #benefits .server-block > p {
       font-size: 20px;
       margin: 30px 0;
     }
 
-    #whyChooseUs .server-block > div {
+    #benefits .server-block > div {
       color: #c4d7d6;
     }
   }
@@ -696,11 +702,11 @@
       margin: 15px;
     }
 
-    #customer .customer-title {
+    #committee .committee-title {
       font-size: 24px;
     }
 
-    #whyChooseUs {
+    #benefits {
       padding: 20px 0;
     }
   }
