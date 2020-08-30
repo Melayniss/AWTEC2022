@@ -57,7 +57,7 @@ export default new Router({
             },
             {
               path: '/committee/local',
-              name: 'Committee',
+              name: 'Committee_local',
               component: Committee_local,
               meta: {
                 title: 'Local Committee'
@@ -120,7 +120,7 @@ export default new Router({
             },
             {
               path: '/preparation/contact',
-              name: 'Contact Us',
+              name: 'Contact_us',
               component: Contact_us,
               meta: {
                 title: 'Contact Us'

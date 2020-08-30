@@ -1,54 +1,61 @@
 <template>
-    <div id="Software" class="container">
-        <div class="row">
-            <div id="left" class="col-md-4 col-xs-12">
-                <ul class="left-container wow bounceInLeft">
-                    <p>软件产品</p>
-                    <li v-for="(item,index) in softwareList" :key="index">
-                        <router-link :to=item.path>{{item.name}}</router-link>
-                    </li>
-                </ul>
-            </div>
-            <div id="right" class="col-md-8 col-xs-12  wow bounceInRight">
-                <router-view></router-view>
-            </div>
-        </div>
+  <div id="Committee" class="container">
+    <div class="row">
+      <div id="left" class="col-md-4 col-xs-12">
+        <ul class="left-container wow bounceInLeft">
+          <p>Committee</p>
+          <li v-for="(item,index) in committeeList" :key="index">
+            <router-link :to=item.path>{{item.name}}</router-link>
+          </li>
+        </ul>
+      </div>
+      <div id="right" class="col-md-8 col-xs-12  wow bounceInRight">
+        <router-view></router-view>
+      </div>
     </div>
+  </div>
 </template>
 <script>
-import { WOW } from "wowjs";
-export default {
-    name: 'Software',
-    data(){
-        return{
-            softwareList: [
-                {
-                    path: '/software/smartTown',
-                    name: '智能小镇管理系统'
-                },{
-                    path: '/software/bigData',
-                    name: '大数据管理系统'
-                }
-            ]
-        }
+  import {WOW} from "wowjs";
+  import Committee_local from "./Committee_local";
+  import Committee_board from "./Committee_board";
+
+  export default {
+    name: 'Committee',
+    data() {
+      return {
+        committeeList: [
+          {
+            path: '/committee/local',
+            // component: Committee_local,
+            name: 'Committee_local',
+          }, {
+            path: '/committee/board',
+            // component: Committee_board,
+            name: 'Committee_board',
+          }
+        ]
+      }
     },
     mounted() {
-        var wow = new WOW();
-        wow.init();
+      var wow = new WOW();
+      wow.init();
     },
-}
+  }
 </script>
 <style scoped>
-#left{
+  #left {
     margin: 50px 0;
-}
-.left-container{
+  }
+
+  .left-container {
     width: 60%;
     margin: 0 auto;
     border: 1px solid #134857;
     border-radius: 5px;
-}
-.left-container>p{
+  }
+
+  .left-container > p {
     text-align: center;
     line-height: 45px;
     padding: 0;
@@ -57,27 +64,32 @@ export default {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-}
-.left-container>li {
-  text-align: center;
-  height: 38px;
-  line-height: 38px;
-  margin: 0;
-  border-top: 1px solid #134857;
-}
-.left-container>li>a{
+  }
+
+  .left-container > li {
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    margin: 0;
+    border-top: 1px solid #134857;
+  }
+
+  .left-container > li > a {
     text-decoration: none;
-}
-.left-container>li:hover{
+  }
+
+  .left-container > li:hover {
     background: #928989;
-}
-#right{
+  }
+
+  #right {
     padding: 50px 0;
-}
-@media screen and (max-width: 768px){
-    #right{
-        padding: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #right {
+      padding: 15px;
     }
-}
+  }
 </style>
 
