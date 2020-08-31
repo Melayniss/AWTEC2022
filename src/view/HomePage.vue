@@ -31,22 +31,16 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="getHere-title">
-            Conference Venue
-            <small>/ Dragon Hotel, in Hang Zhou</small>
+            {{venueMsg.title}}
+            <small>{{venueMsg.viceTitle}}</small>
           </h2>
-          <p>The Dragon Hotel in Hangzhou is the one of the best choices for travellers around the world to visit
-            Hangzhou. The hotel has ideal location in the heart of Hangzhou's
-            central business district. Close to splendid shopping, and major corporate and government offices, The
-            Dragon is also on the doorstep of some of China's most revered cultural landmarks. The hotel faces the
-            stunning Baoshi Mountain and is a short walk from historic and picturesque West Lake.</p>
-          <p>Address: 120 Shuguang Road, Hangzhou, China, 310007</p>
-          <p>Tel: (86) 400 862 5688</p>
+          <p>{{venueMsg.content}}</p>
+          <p>{{venueMsg.content_1}}</p>
+          <p>{{venueMsg.content_2}}</p>
           <h2 class="getHere-link">
-            <a href="http://hangzhoudragonhotel.com/">
-              Dragon Hotel, in Hang Zhou
-            </a>
+            <a href="http://hangzhoudragonhotel.com/">{{venueMsg.linkTitle}}</a>
           </h2>
-          <a href="#/preparation/route" class="btn btn-lg btn-block btn-info">Get Here</a>
+          <a href="preparation/route" class="btn btn-lg btn-block btn-info">{{venueMsg.detailTitle}}</a>
         </div>
       </div>
     </div>
@@ -72,7 +66,7 @@
     <!-- Committee -->
     <div id="committee" class="container-fuild">
       <div class="container committee-container">
-        <p class="committee-title text-center">Local Committee</p>
+        <p class="committee-title text-center">{{committeeMsg.title}}</p>
         <!--        Here is the way to code the xml in function.-->
         <div class="swiper-container committee-swiper hidden-xs">
           <div class="swiper-wrapper">
@@ -84,7 +78,7 @@
               <div class="committee-logo">
                 <img class="center-block" :src="item.logo" alt="logo">
               </div>
-              <div class="committee-yh">
+              <div class="committee-quote">
                 <img src="@/assets/img/quote.png" alt="引号">
               </div>
               <div class="committee-content1">
@@ -102,7 +96,7 @@
             <div class="committee-logo">
               <img class="center-block" :src="item.logo" alt="logo">
             </div>
-            <div class="committee-yh">
+            <div class="committee-quote">
               <img src="@/assets/img/quote.png" alt="引号">
             </div>
             <div class="committee-content1">
@@ -119,8 +113,8 @@
     <div id="benefits" class="container-fuild">
       <div class="container">
         <div class="benefits-title text-center">
-          <p>AWTEC 2022</p>
-          <p>Deliver the most recent and future development.</p>
+          <p>{{benefitMsg.title}}</p>
+          <p>{{benefitMsg.viceTitle}}</p>
         </div>
         <div class="row">
           <div
@@ -148,9 +142,29 @@
     </div>
   </div>
 </template>
+
 <script>
   import Swiper from "swiper";
   import {WOW} from 'wowjs';
+
+  const venueMsg = {
+    title: "Venue",
+    viceTitle: "/ Dragon Hotel, in Hang Zhou",
+    content: "The Dragon Hotel in Hangzhou is the one of the best choices for travellers around the world to visit Hangzhou. The hotel has ideal location in the heart of Hangzhou's central business district. Close to splendid shopping, and major corporate and government offices, The Dragon is also on the doorstep of some of China's most revered cultural landmarks. The hotel faces the stunning Baoshi Mountain and is a short walk from historic and picturesque West Lake.",
+    content_1: "Address: 120 Shuguang Road, Hangzhou, China, 310007",
+    content_2: "Tel: (86) 400 862 5688",
+    linkTitle: "Dragon Hotel, in Hang Zhou",
+    detailTitle: "How to Get Here"
+  }
+
+  const committeeMsg = {
+    title: "Local Committee"
+  }
+
+  const benefitMsg = {
+    title: "AWTEC 2022",
+    viceTitle: "Deliver the most recent and future development."
+  }
 
   export default {
     name: "HomePage",
@@ -164,18 +178,18 @@
             title: 'AWTEC 2022',
             content: 'We propose the plan of 6th AWTEC to be held at Hangzhou city in China on September 11-15 of 2022.',
           },
-		  {
+          {
             img: require("@/assets/img/scene_6.jpg"),
             path: "",
             title: 'Hang Zhou',
             content: 'Also romanized as Hangchow, is the capital and the most popular city of Zhejiang Province in China.',
           },
-		  {
-		    img: require("@/assets/img/zju_4.jpg"),
-		    path: "",
-		    title: 'Zhe Jiang University',
-		    content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
-		  },
+          {
+            img: require("@/assets/img/zju_4.jpg"),
+            path: "",
+            title: 'Zhe Jiang University',
+            content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
+          },
           {
             img: require("@/assets/img/zju_3.jpg"),
             path: "",
@@ -183,7 +197,11 @@
             content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
           },
         ],
+
+        venueMsg,
+
         // the local committee
+        committeeMsg,
         committeeList: [
           {
             logo: require("@/assets/img/local_0.jpg"),
@@ -227,49 +245,9 @@
             content:
               "The dean of Engineering College, Ocean University of China. Mainly engaged in the research on ocean environment hydrodynamics, ocean renewable energy utilization and practical technology development, has been the PI for over 10 scientific research projects."
           },
-          // {
-          //   logo: require("@/assets/img/local_0.jpg"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // },
-          // {
-          //   logo: require("@/assets/img/logo_hp.png"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // },
-          // {
-          //   logo: require("@/assets/img/logo_toyota.png"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // },
-          // {
-          //   logo: require("@/assets/img/logo_hp.png"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // },
-          // {
-          //   logo: require("@/assets/img/logo_kk.png"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // },
-          // {
-          //   logo: require("@/assets/img/logo_hp.png"),
-          //   title:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          //   content:
-          //     "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-          // }
         ],
+
+        benefitMsg,
         benefitsList: [
           {
             logo: require("@/assets/img/tel.png"),
@@ -356,6 +334,7 @@
     }
   };
 </script>
+
 <style scoped>
   /* 整体盒子 */
   #HomePage {
@@ -427,7 +406,7 @@
     margin: 50px 0 20px;
   }
 
-  /* 您身边的IT专家 */
+  /* contact ways */
   #contactUs {
     color: #fff;
     height: 400px;
@@ -469,7 +448,7 @@
     background-size: 100% 100%;
   }
 
-  /* 客户评价 */
+  /* committee */
   #committee {
     padding: 50px 0;
     box-sizing: border-box;
@@ -494,7 +473,7 @@
     border: 1px solid #c4d7d6;
   }
 
-  #committee .committee-yh img {
+  #committee .committee-quote img {
     width: 34px;
     height: 34px;
   }

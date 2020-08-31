@@ -15,6 +15,7 @@
     </div>
   </div>
 </template>
+
 <script>
   import {WOW} from "wowjs";
   import Committee_local from "./Committee_local";
@@ -43,6 +44,7 @@
     },
   }
 </script>
+
 <style scoped>
   #left {
     margin: 50px 0;

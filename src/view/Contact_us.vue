@@ -1,8 +1,8 @@
 <template>
-  <div id="ContactUs">
+  <div id="Contact_us">
     <div class="banner container-fuild text-center">联系我们</div>
     <div class="container">
-      <div class="container-fuild ContactUs-container">
+      <div class="container-fuild Contact_us-container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6">
             <form class="form-horizontal" role="form">
@@ -45,6 +45,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { WOW } from 'wowjs'
 import BMap from "BMap";
@@ -75,6 +76,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 .banner {
   color: #fff;
@@ -87,7 +89,7 @@ export default {
   background-attachment: scroll;
   background-position: center center;
 }
-.ContactUs-container {
+.Contact_us-container {
   padding: 80px 0;
   transition: all ease 0.5s;
   box-sizing: border-box;
@@ -101,7 +103,7 @@ export default {
   margin-left: 0;
 }
 @media screen and (max-width: 997px) {
-  .ContactUs-container {
+  .Contact_us-container {
     padding: 20px 0;
   }
 }
