@@ -1,11 +1,11 @@
 <template>
-    <div id="container">
-        <router-view />
+    <div id="Router">
+<!--        <router-view></router-view>-->
     </div>
 </template>
 <script>
 export default {
-    name: 'PageView'
+    name: 'Router'
 }
 </script>
 <style scoped>

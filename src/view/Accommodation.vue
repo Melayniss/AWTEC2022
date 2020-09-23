@@ -1,6 +1,6 @@
 <template>
-    <div id="container">
-        <router-view />
+    <div id="Accommodation">
+<!--        <router-view></router-view>-->
     </div>
 </template>
 <script>

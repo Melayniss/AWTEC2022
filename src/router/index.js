@@ -14,6 +14,7 @@ import Route from "../view/Route";
 import FAQ from "../view/FAQ";
 import Sponsorship from "../view/Sponsorship";
 import Login from "../view/Login";
+import history from "swiper/src/components/history/history";
 
 // const Committee = () => import("../view/Committee")
 // const Committee_local = () => import("../view/Committee_local")
@@ -22,21 +23,26 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '*',
-      redirect: '/'
-    },
+    // {
+    //   path: '*',
+    //   redirect: '/'
+    // },
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: HomePage,
+      //children 中的path 不要加“/”
       children: [
+        // {
+        //   path: '/',
+        //   redirect: '/home'
+        // },
         {
-          path: '/',
-          redirect: '/home'
-        },
-        {
-          path: '/home',
+          path: 'home',
           name: 'Home',
           component: HomePage,
           meta: {
@@ -44,7 +50,7 @@ export default new Router({
           }
         },
         {
-          path: '/committee',
+          path: 'committee',
           name: 'Committee',
           component: Committee,
           meta: {
@@ -52,11 +58,11 @@ export default new Router({
           },
           children: [
             {
-              path: '/committee',
-              redirect: '/committee/local'
+              path: 'committee',
+              redirect: '/committee'
             },
             {
-              path: '/committee/local',
+              path: 'committee/local',
               name: 'Committee_local',
               component: Committee_local,
               meta: {
@@ -64,7 +70,7 @@ export default new Router({
               }
             },
             {
-              path: '/committee/board',
+              path: 'committee/board',
               name: 'Committee_board',
               component: Committee_board,
               meta: {
@@ -74,7 +80,7 @@ export default new Router({
           ]
         },
         {
-          path: '/routine',
+          path: 'routine',
           name: 'Routine',
           component: Routine,
           meta: {
@@ -82,7 +88,7 @@ export default new Router({
           }
         },
         {
-          path: '/speaker',
+          path: 'speaker',
           name: 'Speaker',
           component: Speaker,
           meta: {
@@ -90,12 +96,12 @@ export default new Router({
           }
         },
         {
-          path: '/preparation',
+          path: 'preparation',
           name: 'Preparation',
           component: Preparation,
           children: [
             {
-              path: '/preparation/accommodation',
+              path: 'preparation/accommodation',
               name: 'Accommodation',
               component: Accommodation,
               meta: {
@@ -103,7 +109,7 @@ export default new Router({
               }
             },
             {
-              path: '/preparation/route',
+              path: 'preparation/route',
               name: 'Route',
               component: Route,
               meta: {
@@ -111,7 +117,7 @@ export default new Router({
               }
             },
             {
-              path: '/preparation/faq',
+              path: 'preparation/faq',
               name: 'FAQ',
               component: FAQ,
               meta: {
@@ -119,7 +125,7 @@ export default new Router({
               }
             },
             {
-              path: '/preparation/contact',
+              path: 'preparation/contact',
               name: 'Contact_us',
               component: Contact_us,
               meta: {
@@ -129,7 +135,7 @@ export default new Router({
           ]
         },
         {
-          path: '/sponsorship',
+          path: 'sponsorship',
           name: 'Sponsorship',
           component: Sponsorship,
           meta: {
@@ -147,5 +153,6 @@ export default new Router({
         // Wait to fulfill this part
       ]
     }
-  ]
+  ],
+  // mode: history
 })

@@ -1,6 +1,6 @@
 <template>
-    <div id="container">
-        <router-view />
+    <div id="PageView">
+        <router-view></router-view>
     </div>
 </template>
 <script>
