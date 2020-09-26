@@ -80,12 +80,12 @@ export default {
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "Home",
+      menuName: "Navigation",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
           name: "Home",
-          path: "/",
+          path: "/home",
           children: []
         },
         {

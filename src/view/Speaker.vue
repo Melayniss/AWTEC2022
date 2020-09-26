@@ -1,207 +1,142 @@
 <template>
-    <div id="NewsInformation">
-        <div class="container">
-            <div class="container text-center">
-                <h3>新闻动态</h3>
-                <p style="color:#b2b2b2">Company News</p>
-            </div>
-            <div class="nav container text-center">
-                <a href="#" class="active">公司新闻</a>
-                <a href="#">行业动态</a>
-            </div>
-            <ul class="news-container container-fuild">
-                <li v-for="(item,index) in newsList" :key="index" class="wow fadeIn">
-                    <div class="content">
-                        <p>{{item.title}}</p>
-                        <p>{{item.introduce}}</p>
-                    </div>
-                    <div class="time">
-                        <p>{{item.date}}</p>
-                        <span>{{item.year}}</span>
-                    </div>
-                    <div class="circle">
-                        <img src="../assets/img/circle.png">
-                        <i class="line center-block"></i>
-                    </div>
-                </li>
-            </ul>
-            <div class="contaianer-fuild text-center more">
-                <i class="glyphicon glyphicon-th"></i>
-            </div>
-        </div>
+  <div id="Service">
+    <div class="container text-center">
+      <h3>我们的服务</h3>
+      <p style="color:#b2b2b2">The Best Service You Never See</p>
     </div>
+    <div class="container">
+      <div class="Service-container row">
+        <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
+             v-for="(item,index) in serviceList" :key="index" @click="ServiceClick(item.id)">
+          <div class="Service-item-wrapper">
+            <div class="Service-item-top">
+              <h4>{{item.title}}</h4>
+              <i></i>
+              <p>{{item.eng_title}}</p>
+            </div>
+            <div class="Service-item-img">
+              <img :src="item.img" alt="服务">
+            </div>
+            <div class="Service-item-border"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import { WOW } from 'wowjs';
 export default {
-    name: 'NewsInformation',
-    data(){
-        return{
-            newsList:[
-                {
-                    id: '001',
-                    title: '世界上第一个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                },{
-                    id: '002',
-                    title: '世界上第二个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                },{
-                    id: '003',
-                    title: '世界上第三个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                },{
-                    id: '004',
-                    title: '世界上第四个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                },{
-                    id: '005',
-                    title: '世界上第五个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                },{
-                    id: '006',
-                    title: '世界上第六个程序员',
-                    introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-                    date: '05-24',
-                    year: '2019'
-                }
-            ]
+  name: 'Service',
+  data(){
+    return{
+      serviceList: [
+        {
+          id: 'section-1',
+          title: '软件定制开发',
+          eng_title: 'Customize App',
+          img: require('@/assets/img/service1.jpg')
+        },{
+          id: 'section-2',
+          title: 'IT外包服务',
+          eng_title: 'Outsourcing',
+          img: require('@/assets/img/service2.jpg')
+        },{
+          id: 'section-3',
+          title: '网上商城建设',
+          eng_title: 'eCommerce Site',
+          img: require('@/assets/img/service3.jpg')
+        },{
+          id: 'section-4',
+          title: 'iOS应用定制开发',
+          eng_title: 'iOS App Dev',
+          img: require('@/assets/img/service4.jpg')
         }
-    },
-    mounted(){
-        var wow = new WOW();
-        wow.init();
-    },
+      ]
+    }
+  },
+  mounted(){
+    var wow = new WOW();
+    wow.init();
+  },
+  methods:{
+    ServiceClick(id){
+      this.$router.push({
+        name: 'servicedetail',
+        params: {
+          id: id
+        }
+      })
+    }
+  }
 }
 </script>
 <style scoped>
-.nav{
-    margin: 20px 0;
+.Service-container{
+  padding: 30px 50px;
 }
-.nav>a{
-    display: inline-block;
-    text-decoration: none;
-    width: 120px;
-    height: 45px;
-    line-height: 45px;
-    color: #333;
-    border: 1px solid #333;
+.Service-item{
+  margin-bottom: 50px;
 }
-.nav>a.active{
-    color: #93b5cf;
-    border-color: #93b5cf;
+.Service-item-wrapper{
+  cursor: pointer;
+  background: rgba(244,244,244,1);
+  overflow: hidden;
+  position: relative;
 }
-.nav>a:hover{
-    color: #93b5cf;
-    border-color: #93b5cf;
+.Service-item-top{
+  width: 100%;
+  height: 120px;
+  padding: 30px;
+  text-align: center;
 }
-.news-container{
-    overflow: hidden;
-    margin-bottom: 0;
+.Service-item-top>i{
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: #28f;
 }
-.news-container>li{
-    width: 55.6%;
-    height: 120px;
-    float: left;
-    color: #333;
-    text-align: right;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
+.Service-item-top>p{
+  color: #b2b2b2;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .5s ease;
 }
-.news-container>li:hover{
-    color: #93b5cf;
-    border: 1px solid #93b5cf;
-    cursor: pointer;
+.Service-item-img{
+  width: 100%;
+  overflow: hidden;
 }
-.news-container>li:nth-of-type(2n){
-    float: right;
-    text-align: left;
+.Service-item-img img{
+  width: 100%;
+  transition: all 0.5s ease;
 }
-.news-container>li>.content{
-    width: 60%;
-    float: left;
-    padding: 20px 0;
+.Service-item-border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  border: 1px solid #000;
+  opacity: 0;
 }
-.news-container>li>.time{
-    width: 20%;
-    float: left;
-    padding: 10px 0;
+.Service-item-wrapper:hover .Service-item-top > i{
+  opacity: 0;
 }
-.news-container>li>.time>p{
-    font-size: 30px;
-    margin: 5px 0;
+.Service-item-wrapper:hover .Service-item-top > p{
+  opacity: 1;
+  transform: translateY(-10px);
 }
-.news-container>li>.circle{
-    width: 20%;
-    height: 100%;
-    float: left;
-    position: relative;
+.Service-item-wrapper:hover .Service-item-img > img{
+  transform: scale(1.1,1.1);
 }
-.news-container>li>.circle>img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 20px;
-    height: 20px;
-}
-.news-container>li>.circle>i{
-    display: block;
-    width: 1px;
-    height: 100%;
-    background: #707070;
-}
-.news-container>li:nth-of-type(2n)>.content{
-    float: right;
-}
-.news-container>li:nth-of-type(2n)>.time{
-    float: right;
-}
-.news-container>li:nth-of-type(2n)>.circle{
-    float: right;
-}
-.news-container>li:nth-of-type(1)>.circle>i{
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-.more{
-    font-size: 25px;
-    color: #707070;
-}
-.more>i{
-    cursor: pointer;
-}
-@media screen and (max-width: 767px){
-    .news-container>li{
-        width: 100%;
-    }
-    .news-container>li>.content{
-        width: 70%;
-        text-align: left;
-        float: right;
-    }
-    .news-container>li>.time{
-        width: 30%;
-        text-align: left;
-        float: right;
-    }
-    .news-container>li>.circle{
-        display: none;
-    }
+.Service-item-wrapper:hover > .Service-item-border{
+  opacity: 1;
+  width: 90%;
+  height: 90%;
 }
 </style>
-

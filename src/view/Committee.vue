@@ -18,8 +18,6 @@
 
 <script>
   import {WOW} from "wowjs";
-  import Committee_local from "./Committee_local";
-  import Committee_board from "./Committee_board";
 
   export default {
     name: 'Committee',
@@ -28,12 +26,10 @@
         committeeList: [
           {
             path: '/committee/local',
-            // component: Committee_local,
-            name: 'Committee_local',
+            name: 'Local Committees',
           }, {
             path: '/committee/board',
-            // component: Committee_board,
-            name: 'Committee_board',
+            name: 'Board and Other Committees',
           }
         ]
       }

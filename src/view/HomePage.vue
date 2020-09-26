@@ -10,21 +10,26 @@
             <div class="swiper-lazy-preloader"></div>
             <div class="swiper-slide-title">
               <h1>{{item.title}}</h1>
-              <p>{{item.content}}</p>
+              <p>
+                {{item.content}}
+                <br>
+                {{item.subContent}}
+              </p>
             </div>
           </div>
         </div>
-        <!-- 如果需要分页器 -->
+        <!-- 分页器 -->
         <div class="swiper-pagination"></div>
 
-        <!-- 如果需要导航按钮 -->
+        <!-- 导航按钮 -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </div>
+
     <!-- Venue -->
     <div id="getHere" class="container-fuild">
-      <div class="row bigData-container">
+      <div class="row getHere">
         <!--        here needs fix. Write container box-->
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">
@@ -34,13 +39,13 @@
             {{venueMsg.title}}
             <small>{{venueMsg.viceTitle}}</small>
           </h2>
-          <p>{{venueMsg.content}}</p>
-          <p>{{venueMsg.content_1}}</p>
-          <p>{{venueMsg.content_2}}</p>
+          <p>{{venueMsg.content}}<br>
+          {{venueMsg.content_1}}<br>
+          {{venueMsg.content_2}}</p>
           <h2 class="getHere-link">
             <a href="http://hangzhoudragonhotel.com/">{{venueMsg.linkTitle}}</a>
           </h2>
-          <a href="preparation/route" class="btn btn-lg btn-block btn-info">{{venueMsg.detailTitle}}</a>
+          <a herf="#/preparation/accommodation" class="btn btn-lg btn-block btn-info">{{venueMsg.detailTitle}}</a>
         </div>
       </div>
     </div>
@@ -176,17 +181,19 @@
             img: require("@/assets/img/scene_3.jpg"),
             path: "",
             title: 'AWTEC 2022',
-            content: 'We propose the plan of 6th AWTEC to be held at Hangzhou city in China on September 11-15 of 2022.',
+            content: 'The 6th AWTEC will be held at Hangzhou city in China.',
+            subContent: 'On September 11-15 of 2022.',
           },
           {
             img: require("@/assets/img/scene_6.jpg"),
             path: "",
             title: 'Hang Zhou',
-            content: 'Also romanized as Hangchow, is the capital and the most popular city of Zhejiang Province in China.',
+            content: 'The capital and the most popular city of Zhejiang Province.',
+            subContent: 'Also romanized as Hangchow.'
           },
           {
             img: require("@/assets/img/zju_4.jpg"),
-            path: "",
+            // path: "",
             title: 'Zhe Jiang University',
             content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
           },
@@ -403,7 +410,7 @@
   }
 
   #getHere .getHere-link {
-    margin: 50px 0 20px;
+    margin: 20px 0 20px;
   }
 
   /* contact ways */
