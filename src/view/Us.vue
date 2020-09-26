@@ -1,5 +1,5 @@
 <template>
-  <div id="Contact_us">
+  <div id="Us">
     <div class="banner container-fuild text-center">联系我们</div>
     <div class="container">
       <div class="container-fuild Contact_us-container">
@@ -50,7 +50,7 @@
 import { WOW } from 'wowjs'
 import BMap from "BMap";
 export default {
-  name: "Contact_us",
+  name: "Us",
   data() {
     return {};
   },

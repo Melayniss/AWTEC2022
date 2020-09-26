@@ -6,13 +6,16 @@
         <p style="color:#b2b2b2">Significant Mentions</p>
       </div>
       <div class="nav container text-center">
-        <a class="active" v-for="(item,index) in routineList" :key="index">
+        <a v-for="(item,index) in routineList"
+           :key="index"
+           :class="index==navIndex?'active':''"
+           @click="navClick(index)">
           <router-link :to="item.path">
             {{item.title}}
           </router-link>
         </a>
       </div>
-      <div class="wow bounceInDown">
+      <div class="wow slideInUp">
         <router-view></router-view>
       </div>
       <div class="contaianer-fuild text-center more">
@@ -27,6 +30,7 @@ export default {
   name: 'Routine',
   data(){
     return{
+      navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
       routineList:[
         {
           path: '/routine/dates',
@@ -43,6 +47,12 @@ export default {
     let wow = new WOW();
     wow.init();
   },
+  methods: {
+    navClick(index){
+      this.navIndex = index;
+      sessionStorage.setItem('navIndex', index);
+    }
+  }
 }
 </script>
 <style scoped>

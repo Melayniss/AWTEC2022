@@ -4,7 +4,7 @@
       <li v-for="(item,index) in programsList" :key="index" class="wow fadeIn">
         <div class="content">
           <p>{{item.title}}</p>
-          <p>{{item.introduce}}</p>
+          <p>{{item.introduction}}</p>
         </div>
         <div class="time">
           <p>{{item.date}}</p>
@@ -26,41 +26,52 @@ export default {
     return{
       programsList:[
         {
-          id: '001',
           title: 'Oral Presentation',
-          introduce: 'Keynote Speech: 45 minutes',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
           date: '09-11',
           year: '2020'
-        },{
-          id: '002',
-          title: '世界上第二个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '003',
-          title: '世界上第三个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '004',
-          title: '世界上第四个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '005',
-          title: '世界上第五个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '006',
-          title: '世界上第六个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
+        },
+        {
+          title: 'Oral Presentation',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
+          date: '09-11',
+          year: '2020'
+        },
+        {
+          title: 'Oral Presentation',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
+          date: '09-11',
+          year: '2020'
+        },
+        {
+          title: 'Oral Presentation',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
+          date: '09-11',
+          year: '2020'
+        },
+        {
+          title: 'Oral Presentation',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
+          date: '09-11',
+          year: '2020'
+        },
+        {
+          title: 'Oral Presentation',
+          introduction: 'Keynote speech for 45 minutes;' + '\n' +
+            'Invited speech for 30 minutes;' +
+            'Paper presentation for 15 or 20 minutes each.',
+          date: '09-11',
+          year: '2020'
         }
       ],
     }

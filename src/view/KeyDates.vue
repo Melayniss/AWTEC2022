@@ -4,7 +4,7 @@
       <li v-for="(item,index) in datesList" :key="index" class="wow fadeIn">
         <div class="content">
           <p>{{item.title}}</p>
-          <p>{{item.introduce}}</p>
+          <p>{{item.introduction}}</p>
         </div>
         <div class="time">
           <p>{{item.date}}</p>
@@ -26,41 +26,52 @@ export default {
     return{
       datesList:[
         {
-          id: '001',
           title: 'Official Conference Website Release',
-          introduce: 'Guests can register and finish essential steps online.',
+          introduction: 'Convenient communication ways can be found.',
           date: '09-01',
-          year: '2020'
-        },{
-          id: '002',
-          title: '世界上第二个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '003',
-          title: '世界上第三个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '004',
-          title: '世界上第四个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第四份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '005',
-          title: '世界上第五个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
-        },{
-          id: '006',
-          title: '世界上第六个程序员',
-          introduce: '为计算程序拟定“算法”，写作的第五份“程序设计流程图”，被珍视为“第一位给计算机',
-          date: '05-24',
-          year: '2019'
+          year: '2021'
+        },
+        {
+          title: 'Abstract Submission',
+          introduction: 'The deadline of the submission of abstract.',
+          date: '03-10',
+          year: '2022'
+        },
+        {
+          title: 'Abstract Acceptance',
+          introduction: 'The deadline of publishing the acceptance of abstract.',
+          date: '04-15',
+          year: '2022'
+        },
+        {
+          title: 'Full-Paper Submission',
+          introduction: 'The deadline of the submission of the full-paper.',
+          date: '06-01',
+          year: '2022'
+        },
+        {
+          title: 'Full-Paper Acceptance',
+          introduction: 'The deadline of publishing the acceptance of full-paper.',
+          date: '06-28',
+          year: '2022'
+        },
+        {
+          title: 'Early Registration',
+          introduction: 'Register and finish essential remained steps.',
+          date: '07-01',
+          year: '2022'
+        },
+        {
+          title: 'Conference reception',
+          introduction: '',
+          date: '09-11',
+          year: '2022'
+        },
+        {
+          title: 'Conference Opening',
+          introduction: '',
+          date: '09-12',
+          year: '2022'
         }
       ],
     }
@@ -78,7 +89,7 @@ export default {
 }
 .routine-container>li{
   width: 55.65%;
-  height: 120px;
+  height: auto;
   float: left;
   color: #333;
   text-align: right;

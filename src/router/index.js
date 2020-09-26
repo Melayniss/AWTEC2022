@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PageView from "../view/PageView";
-import Contact_us from "../view/Contact_us";
+import Us from "../view/Us";
 import HomePage from "../view/HomePage";
 import Committee from "../view/Committee";
 import Local from "../view/CommitteeLocal";
@@ -69,6 +68,10 @@ const routes = [
     },
     children: [
       {
+        path: '',
+        redirect: 'dates'
+      },
+      {
         path: 'dates',
         component: Dates,
         meta: {
@@ -124,7 +127,7 @@ const routes = [
       },
       {
         path: 'contact',
-        component: Contact_us,
+        component: Us,
         meta: {
           title: 'AWTEC 2022: Contact Us in the Ways below'
         }
