@@ -1,6 +1,8 @@
 <template>
     <div id="Preparation">
-        <div class="banner container-fuild text-center">关于我们</div>
+        <div class="banner container-fuild text-center">
+          Preparation
+        </div>
         <div class="container">
             <div class="row CompanyIntroduction-container">
                 <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
@@ -9,7 +11,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-6">
                     <h3>Preparation You Need to Focus</h3>
                   <p class=".text-justify">
-                    Where you will live →
+                    {{AccommodationGuide}}
 <!--                    <q v-on:click="/accommodation">Accommodation</q>-->
                   </p>
 
@@ -35,10 +37,11 @@
 <script>
 import { WOW } from 'wowjs';
 export default {
-    name: 'CompanyIntroduction',
+    name: 'Preparation',
     data(){
         return{
-
+          AccommodationGuide: 'Where you will live →',
+          Rout
         }
     },
     mounted(){

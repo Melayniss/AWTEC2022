@@ -1,14 +1,14 @@
 <template>
-    <div id="Software">
-        大数据管理系统
+    <div id="board">
+      {{title}}
     </div>
 </template>
 <script>
 export default {
-    name: 'Software',
+    name: 'CommitteeBoard',
     data(){
         return{
-
+          title: 'Board or Other Committees'
         }
     }
 }

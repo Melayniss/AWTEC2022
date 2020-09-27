@@ -15,7 +15,6 @@ import Sponsorship from "../view/Sponsorship";
 import Dates from "../view/KeyDates";
 import Programs from "../view/Programs";
 // import Login from "../view/Login";
-// import history from "swiper/src/components/history/history";
 
 // Other writing way
 // const Committee = () => import("../view/Committee")
@@ -43,6 +42,10 @@ const routes = [
       title: 'AWTEC 2022: Committees'
     },
     children: [
+      {
+        path: '',
+        redirect: 'local'
+      },
       {
         path: 'local',
         // name: '',
@@ -105,7 +108,7 @@ const routes = [
     children: [
       {
         path: 'accommodation',
-        // name: '',
+        name: 'accommodation',
         component: Accommodation,
         meta: {
           title: 'AWTEC 2022: Official Accommodation'
@@ -113,6 +116,7 @@ const routes = [
       },
       {
         path: 'route',
+        name: 'route',
         component: Route,
         meta: {
           title: 'AWTEC 2022: The Route towards Destination'
@@ -127,6 +131,7 @@ const routes = [
       },
       {
         path: 'contact',
+        name: 'contact',
         component: Us,
         meta: {
           title: 'AWTEC 2022: Contact Us in the Ways below'
@@ -147,6 +152,6 @@ const routes = [
 ]
 
 export default new Router({
-  routes: routes
-  // mode: history,
+  routes: routes,
+  mode: 'history'
 })
