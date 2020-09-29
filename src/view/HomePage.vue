@@ -45,15 +45,15 @@
           <h2 class="getHere-link">
             <a href="http://hangzhoudragonhotel.com/">{{venueMsg.linkTitle}}</a>
           </h2>
-          <a herf="#/preparation/accommodation" class="btn btn-lg btn-block btn-info">{{venueMsg.detailTitle}}</a>
+          <a v-bind:href="{path: '/venue'}" class="btn btn-lg btn-block btn-info">{{venueMsg.detailTitle}}</a>
         </div>
       </div>
     </div>
     <!-- Contacts -->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>Local Committee</h1>
-        <h3>ZJU Prof. Zhang</h3>
+        <h1>News and faqs could be found</h1>
+        <h3>in the ways below</h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
@@ -417,8 +417,7 @@
   #contactUs {
     color: #fff;
     height: 400px;
-    background: url("../assets/img/contact_us_bg.jpg") 0 0 no-repeat;
-    /*use which photo?*/
+    background: url("../assets/img/lighthouse.jpeg") 0 0 no-repeat;
     background-size: 100% 100%;
     transition: all ease 0.6s;
   }

@@ -89,7 +89,7 @@ export default {
 }
 .routine-container>li{
   width: 55.65%;
-  height: auto;
+  height: 120px;
   float: left;
   color: #333;
   text-align: right;
