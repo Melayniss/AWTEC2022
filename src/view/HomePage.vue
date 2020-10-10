@@ -9,8 +9,10 @@
             <img class="swiper-lazy" :data-src="item.img" alt="" src="">
             <div class="swiper-lazy-preloader"></div>
             <div class="swiper-slide-title">
-              <h1>{{ item.title }}</h1>
-              <p>
+              <h1>
+                {{ item.title }}
+              </h1>
+              <p v-if="item.content!=null && item.subContent!=null">
                 {{ item.content }}
                 <br>
                 {{ item.subContent }}
@@ -27,6 +29,25 @@
       </div>
     </div>
 
+    <!--Development-->
+    <div id="development" class="container-fluid">
+      <div class="container">
+        <div class="development-container">
+          <div class="text-center">
+            <h2>
+              {{ development.title }}
+            </h2>
+            <br>
+            <p style="color:#b2b2b2">
+              {{ development.subtitle }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <!-- Venue -->
     <div id="getHere" class="container-fuild">
       <div class="row getHere">
@@ -34,7 +55,11 @@
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+
+        <!--flex now-->
+        <div class="col-xs-12 col-sm-12 col-md-6"
+             style="display: flex;flex-direction: column;"
+        >
           <h2 class="getHere-title">
             {{ venueMsg.title }}
             <small>{{ venueMsg.viceTitle }}</small>
@@ -43,9 +68,10 @@
             {{ venueMsg.content }}
           </p>
 
-          <h2 class="getHere-link">
+          <h2>
             <a href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
           </h2>
+
           <a class="btn btn-lg btn-block btn-info" @click="navigateToVenue">{{ venueMsg.detailTitle }}</a>
         </div>
       </div>
@@ -53,14 +79,15 @@
     <!-- Contacts -->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>News and faqs could be found</h1>
-        <h3>in the ways below</h3>
+        <h1>{{ contactMsg.h1 }}</h1>
+        <h3>{{ contactMsg.h3 }}</h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
           onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
+          @click="navigateToContact"
         >
-          Contact Us
+          {{ contactMsg.title }}
         </button>
         <div class="contactUs-contactWay">
           <span></span>
@@ -69,52 +96,7 @@
         </div>
       </div>
     </div>
-    <!-- Committee -->
-    <div id="committee" class="container-fuild">
-      <div class="container">
-        <p class="committee-title text-center">{{ committeeMsg.title }}</p>
-        <!--        Here is the way to code the xml in function.-->
-        <div class="swiper-container committee-swiper hidden-xs">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide committee-block"
-              v-for="(item,index) in committeeList"
-              :key="index"
-            >
-              <div class="committee-logo">
-                <img class="center-block" :src="item.logo" alt="logo">
-              </div>
-              <div class="committee-quote">
-                <img src="@/assets/img/quote.png" alt="引号">
-              </div>
-              <div class="committee-description">
-                <small>{{ item.content }}</small>
-              </div>
-              <div class="committee-name">{{ item.title }}</div>
-            </div>
-          </div>
-          <!-- 如果需要导航按钮 -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <div class="row visible-xs committee-block">
-          <div class="col-xs-12" v-for="(item,index) in committeeList" :key="index">
-            <div class="committee-logo">
-              <img class="center-block" :src="item.logo" alt="logo">
-            </div>
-            <div class="committee-quote">
-              <img src="@/assets/img/quote.png" alt="引号">
-            </div>
-            <div class="committee-description">
-              <small>{{ item.content }}</small>
-            </div>
-            <div class="committee-name">
-              <small>{{ item.title }}</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- The benefit -->
     <div id="benefits" class="container-fuild">
       <div class="container">
@@ -166,6 +148,16 @@ const venueMsg = {
   detailTitle: "Get There"
 }
 
+const development = {
+  title: "Ocean Energy Development in China",
+  subtitle: "As the Largest Energy-Consuming Country in the World"
+}
+
+const contactMsg = {
+  title: "Contact Us",
+  h1: "News and faqs could be found",
+  h3: "in the ways below ",
+}
 const committeeMsg = {
   title: "Local Committee"
 }
@@ -175,6 +167,7 @@ const benefitMsg = {
   viceTitle: "Deliver the most recent and future development."
 }
 
+
 export default {
   name: "HomePage",
   data() {
@@ -183,14 +176,14 @@ export default {
       swiperList: [
         {
           img: require("@/assets/img/scene_3.jpg"),
-          path: "",
+          // path: "",
           title: 'AWTEC 2022',
           content: 'The 6th AWTEC will be held at Hangzhou city in China.',
           subContent: 'On September 11-15 of 2022.',
         },
         {
           img: require("@/assets/img/scene_6.jpg"),
-          path: "",
+          // path: "",
           title: 'Hangzhou',
           content: 'The capital and the most popular city of Zhejiang Province.',
           subContent: 'Also romanized as Hangchow.'
@@ -209,7 +202,20 @@ export default {
         },
       ],
 
+      development,
+      developmentsList: [
+        {
+          title: "the 13th Five-year Plan for Marine Renewable Energy (2016-2020)"
+        },
+        {
+          title: "the National Key Research and Development Program",
+        },
+        //有其他的成就就往里面加
+      ],
+
       venueMsg,
+
+      contactMsg,
 
       // the local committee
       committeeMsg,
@@ -313,6 +319,7 @@ export default {
       observeParents: true
       //修改swiper的父元素时，自动初始化swiper
     });
+
     /* committee-swiper */
     new Swiper(".committee-swiper", {
       loop: true, // 循环模式选项
@@ -333,6 +340,7 @@ export default {
       observeParents: true
       //修改swiper的父元素时，自动初始化swiper
     });
+
     /* wowjs动画 */
     var wow = new WOW({
       boxClass: 'wow',
@@ -344,8 +352,12 @@ export default {
     wow.init();
   },
   methods: {
-    navigateToVenue(){
+    navigateToVenue() {
       this.$router.push('/accommodation');
+    },
+
+    navigateToContact() {
+      this.$router.push('/contact');
     }
   }
 };
@@ -359,7 +371,7 @@ export default {
 
 /* swiper image */
 #rotation {
-  height: 600px;
+  height: 500px;
 }
 
 #rotation .banner-swiper {
@@ -387,46 +399,55 @@ export default {
   background: rgba(51, 51, 51, 0.534);
   text-align: center;
   line-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #rotation .banner-swiper .swiper-slide-title > h1 {
   font-size: 50px;
-  margin-top: 15%;
 }
 
 #rotation .banner-swiper .swiper-slide-title > p {
   font-size: 20px;
-  margin-top: 1%;
-  font-weight: 700;
+  font-weight: bold;
+}
+
+.development-container {
+  margin: 80px 0 0 0;
+  padding: 30px;
+  transition: all ease 0.5s;
+  border: 1px dashed lightseagreen;
 }
 
 /* GET HERE PART */
 #getHere {
-  padding: 100px;
+  padding: 80px;
   transition: all ease 0.6s;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #getHere .getHere-title {
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
   border-bottom: 1px solid #c4d7d6;
 }
 
 #getHere p {
   font-size: 14px;
-  color: #333;
+  color: #333333;
   line-height: 2rem;
-}
-
-#getHere .getHere-link {
-  margin: 20px 0 20px;
 }
 
 /* contact ways */
 #contactUs {
   color: #fff;
   height: 400px;
-  background: url("../assets/img/lighthouse.jpeg") 0 0 no-repeat;
+  background: url("../assets/img/lighthouse.jpg") 0 0 no-repeat;
   background-size: 100% 100%;
   transition: all ease 0.6s;
 }
@@ -543,7 +564,7 @@ export default {
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
   #rotation {
-    height: 200px;
+    height: 400px;
   }
 
   #getHere {
@@ -705,3 +726,50 @@ export default {
   }
 }
 </style>
+
+<!-- Committee -->
+<!--    <div id="committee" class="container-fuild">-->
+<!--      <div class="container">-->
+<!--        <p class="committee-title text-center">{{ committeeMsg.title }}</p>-->
+<!--        &lt;!&ndash;        Here is the way to code the xml in function.&ndash;&gt;-->
+<!--        <div class="swiper-container committee-swiper hidden-xs">-->
+<!--          <div class="swiper-wrapper">-->
+<!--            <div-->
+<!--              class="swiper-slide committee-block"-->
+<!--              v-for="(item,index) in committeeList"-->
+<!--              :key="index"-->
+<!--            >-->
+<!--              <div class="committee-logo">-->
+<!--                <img class="center-block" :src="item.logo" alt="logo">-->
+<!--              </div>-->
+<!--              <div class="committee-quote">-->
+<!--                <img src="@/assets/img/quote.png" alt="引号">-->
+<!--              </div>-->
+<!--              <div class="committee-description">-->
+<!--                <small>{{ item.content }}</small>-->
+<!--              </div>-->
+<!--              <div class="committee-name">{{ item.title }}</div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
+<!--          <div class="swiper-button-prev"></div>-->
+<!--          <div class="swiper-button-next"></div>-->
+<!--        </div>-->
+<!--        <div class="row visible-xs committee-block">-->
+<!--          <div class="col-xs-12" v-for="(item,index) in committeeList" :key="index">-->
+<!--            <div class="committee-logo">-->
+<!--              <img class="center-block" :src="item.logo" alt="logo">-->
+<!--            </div>-->
+<!--            <div class="committee-quote">-->
+<!--              <img src="@/assets/img/quote.png" alt="引号">-->
+<!--            </div>-->
+<!--            <div class="committee-description">-->
+<!--              <small>{{ item.content }}</small>-->
+<!--            </div>-->
+<!--            <div class="committee-name">-->
+<!--              <small>{{ item.title }}</small>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->

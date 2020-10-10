@@ -24,6 +24,33 @@
         </div>
       </div>
     </div>
+
+<!--    杭州美食-->
+
+<!--    <div class="container">-->
+<!--      <div class="speaker-container row">-->
+<!--        <div class="speaker-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"-->
+<!--             v-for="(item,index) in speakerList" :key="index" @click="ServiceClick(item.id)">-->
+<!--          <div class="speaker-item-wrapper">-->
+<!--            <div class="speaker-item-top">-->
+<!--              <h4>{{item.title}}</h4>-->
+<!--              <i></i>-->
+<!--              <p>{{item.subTitle}}</p>-->
+<!--            </div>-->
+<!--            <div class="speaker-item-img">-->
+<!--              <img :src="item.img" alt="服务">-->
+<!--            </div>-->
+<!--            <div class="speaker-item-border"></div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--    杭州风景-->
+
+
+
   </div>
 </template>
 <script>
@@ -72,7 +99,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url('../assets/img/banner1.png');
+  background-image: url('../assets/img/bar.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;

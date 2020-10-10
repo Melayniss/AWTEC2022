@@ -9,6 +9,7 @@ import router from './router'
 /* axios */
 import axios from './api'
 import api from './api/api'
+
 Vue.prototype.http = axios;
 Vue.prototype.api = api;
 
@@ -28,34 +29,41 @@ import './assets/js/bootstrap.min'
 /* animate.css */
 import 'animate.css'
 
- 
+
 /* 头部组件 */
 import Header from './components/Header'
-Vue.component(Header.name,Header)
 
+Vue.component(Header.name, Header)
 
 /* 尾部组件 */
 import Footer from './components/Footer'
-Vue.component(Footer.name,Footer)
+
+Vue.component(Footer.name, Footer)
 
 /* 回到顶部 */
 import GoTop from './components/GoTop'
-Vue.component(GoTop.name,GoTop)
+
+Vue.component(GoTop.name, GoTop)
+
+// 组件注册
+import Map from './components/Map'
+
+Vue.component(Map.name, Map)
 
 Vue.config.productionTip = false
 
 
 router.beforeEach((to, from, next) => {
-    if(to.meta.title){
-      document.title = to.meta.title
-    }
-    next();
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next();
 });
 
 
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

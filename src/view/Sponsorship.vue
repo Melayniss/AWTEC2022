@@ -7,6 +7,7 @@
       <div class="sponsorship-container wow pulse">
         <h2>{{ express.title }}</h2>
         <br>
+<!--        index for other operations-->
         <ul v-for="(item, index) in express.sponsorsList">
           <li>{{ item.name }}</li>
         </ul>

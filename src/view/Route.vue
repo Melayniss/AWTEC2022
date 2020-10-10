@@ -1,42 +1,11 @@
 <template>
-  <div id="Us">
-    <div class="banner container-fuild text-center">联系我们</div>
+  <div id="Route">
+    <div class="banner container-fuild text-center">
+      Route
+    </div>
     <div class="container">
       <div class="container-fuild Contact_us-container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">姓名</label>
-                <div class="col-sm-10 col-xs-12">
-                  <input type="text" class="form-control" id="name" placeholder="请输入名字">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">邮箱</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="email" placeholder="请输入邮箱">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="tel" class="col-sm-2 control-label">电话</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="tel" placeholder="请输入电话">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="content" class="col-sm-2 control-label">内容</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="content" rows="8" placeholder="请输入内容"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default btn-block">提交</button>
-                </div>
-              </div>
-            </form>
-          </div>
           <div class="col-xs-12 col-sm-12 col-md-6">
             <div id="map" class="wow zoomIn"></div>
           </div>
@@ -49,27 +18,40 @@
 <script>
 import { WOW } from 'wowjs'
 import BMap from "BMap";
+
 export default {
   name: "Router",
   data() {
     return {};
   },
   mounted() {
+    var content =
+      "<h3 style='margin:0 0 5px 0;padding:0.2em 0'>Dragon Hotel</h3>" +
+      "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>Address: 120 Shuguang Road, Xihu District, Hangzhou City, Zhejiang Province</p>" +
+      "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>Phone Number: (0571) 87998833</p>" +
+      "</div>";
+    // 采用内嵌HTML方式编写地图插件
+
     var map = new BMap.Map("map"); // 创建地图实例
-    var point = new BMap.Point(116.301841,40.156506); // 创建点坐标
-    map.centerAndZoom(point, 18); // 初始化地图，设置中心点坐标和地图级别
-    map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+
+    var point = new BMap.Point(120.149368, 30.273372); // 创建点坐标
+    //此处使用百度地图坐标拾取系统获得定点坐标
+    //为 http://api.map.baidu.com/lbsapi/getpoint/index.html
+
     var marker = new BMap.Marker(point); // 创建标注
-    map.addOverlay(marker); // 将标注添加到地图中
-    var opts = {
-      width: 50, // 信息窗口宽度
-      height: 10, // 信息窗口高度
-      title: "黄元公寓" // 信息窗口标题
-    };
+
     var infoWindow = new BMap.InfoWindow(
-        "我的家",
-        opts
+      content
     ); // 创建信息窗口对象
+
+    map.centerAndZoom(point, 18); // 初始化地图，设置中心点坐标和地图级别
+    map.addOverlay(marker); // 将标注添加到地图中
+    // marker.addEventListener("click",function (){
+    //   this.openInfoWindow(infoWindow);
+    // })
+    // //点击后再出现图标
+    map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+
     map.openInfoWindow(infoWindow, map.getCenter()); // 打开信息窗口
     var wow = new WOW();
     wow.init();
@@ -83,7 +65,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url("../assets/img/banner_1.jpg");
+  background-image: url("../assets/img/nightscene.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
