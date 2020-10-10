@@ -88,57 +88,78 @@ export default {
           path: "/home",
           children: []
         },
-        {
-          name: "Committee",
-          path: "/committee",
-          children: [
-            {
-              name: "Local Committees",
-              path: "/committee/local"
-            },
-            {
-              name: "Board or Other",
-              path: "/committee/board"
-            }
-          ]
-        },
+        // {
+        //   name: "Committee",
+        //   path: "/committee",
+        //   children: [
+        //     {
+        //       name: "Local Committees",
+        //       path: "/committee/local"
+        //     },
+        //     {
+        //       name: "Board or Other",
+        //       path: "/committee/board"
+        //     }
+        //   ]
+        // },
         {
           name: "Routine",
           path: "/routine",
           children: []
         },
-        {
-          name: "Speaker",
-          path: "/speaker",
-          children: []
-        },
+        // {
+        //   name: "Speaker",
+        //   path: "/speaker",
+        //   children: []
+        // },
         {
           name: "Preparation",
           path: "/preparation",
-          children: [
-            {
-              name: "Accommodation",
-              path: "/preparation/accommodation"
-            },
-            {
-              name: "Route",
-              path: "/preparation/route"
-            },
-            {
-              name: "FAQ",
-              path: "/preparation/faq"
-            },
-            {
-              name: "Contact Us",
-              path: "/preparation/contact"
-            },
-          ]
+          children: []
+          // children: [
+          //   {
+          //     name: "Accommodation",
+          //     path: "/preparation/accommodation"
+          //   },
+          //   {
+          //     name: "Route",
+          //     path: "/preparation/route"
+          //   },
+          //   {
+          //     name: "FAQ",
+          //     path: "/preparation/faq"
+          //   },
+          //   {
+          //     name: "Contact Us",
+          //     path: "/preparation/contact"
+          //   },
+          // ]
         },
         {
-          name: "Sponsorship",
-          path: "/sponsorship",
+          name: "Accommodation",
+          path: "/accommodation",
           children: []
         },
+        {
+          name: "Route",
+          path: "/route",
+          children: []
+        },
+        {
+          name: "FAQ",
+          path: "/faq",
+          children: []
+        },
+        {
+          name: "Contact Us",
+          path: "/contact",
+          children: []
+        },
+        // {
+        //   name: "Sponsorship",
+        //   path: "/sponsorship",
+        //   children: []
+        // },
         // {
         //   name: "Log in",
         //   path: "/login",

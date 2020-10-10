@@ -1,7 +1,7 @@
 <template>
   <div id="Preparation">
     <div class="banner container-fuild text-center">
-      Preparation
+      {{ title }}
     </div>
     <div class="container">
       <div class="row CompanyIntroduction-container">
@@ -9,7 +9,7 @@
           <img class="img-responsive center-block" src="@/assets/img/about_img.png" alt="">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
-          <h3>{{ title }}</h3>
+          <h3>{{ subtitle }}</h3>
           <ul>
             <li class=".text-justify"
               v-for="(item,index) in preparationList"
@@ -33,7 +33,8 @@ export default {
   name: 'Preparation',
   data() {
     return {
-      title: 'Preparation You Need to Focus',
+      title: 'Preparation',
+      subtitle: 'Pre-Work You Need to Focus',
       Route: '',
       preparationList: [
         {

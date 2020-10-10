@@ -102,42 +102,74 @@ const routes = [
     path: '/preparation',
     // name: '',
     component: Preparation,
+    //release version 1.0.0 need to separate this part
     meta: {
       title: 'AWTEC 2022: Preparations Needed'
     },
-    children: [
-      {
-        path: 'accommodation',
-        name: 'accommodation',
-        component: Accommodation,
-        meta: {
-          title: 'AWTEC 2022: Official Accommodation'
-        }
-      },
-      {
-        path: 'route',
-        name: 'route',
-        component: Route,
-        meta: {
-          title: 'AWTEC 2022: The Route towards Destination'
-        }
-      },
-      {
-        path: 'faq',
-        component: FAQ,
-        meta: {
-          title: 'AWTEC 2022: FAQs'
-        }
-      },
-      {
-        path: 'contact',
-        name: 'contact',
-        component: Us,
-        meta: {
-          title: 'AWTEC 2022: Contact Us in the Ways below'
-        }
-      }
-    ]
+    // children: [
+    //   {
+    //     path: 'accommodation',
+    //     name: 'accommodation',
+    //     component: Accommodation,
+    //     meta: {
+    //       title: 'AWTEC 2022: Official Accommodation'
+    //     }
+    //   },
+    //   {
+    //     path: 'route',
+    //     name: 'route',
+    //     component: Route,
+    //     meta: {
+    //       title: 'AWTEC 2022: The Route towards Destination'
+    //     }
+    //   },
+    //   {
+    //     path: 'faq',
+    //     component: FAQ,
+    //     meta: {
+    //       title: 'AWTEC 2022: FAQs'
+    //     }
+    //   },
+    //   {
+    //     path: 'contact',
+    //     name: 'contact',
+    //     component: Us,
+    //     meta: {
+    //       title: 'AWTEC 2022: Contact Us in the Ways below'
+    //     }
+    //   }
+    // ]
+  },
+  {
+    path: '/accommodation',
+    name: 'accommodation',
+    component: Accommodation,
+    meta: {
+      title: 'AWTEC 2022: Official Accommodation'
+    }
+  },
+  {
+    path: '/route',
+    name: 'route',
+    component: Route,
+    meta: {
+      title: 'AWTEC 2022: The Route towards Destination'
+    }
+  },
+  {
+    path: '/faq',
+    component: FAQ,
+    meta: {
+      title: 'AWTEC 2022: FAQs'
+    }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: Us,
+    meta: {
+      title: 'AWTEC 2022: Contact Us in the Ways below'
+    }
   },
   {
     path: '/sponsorship',
