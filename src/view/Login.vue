@@ -1,11 +1,13 @@
 <template>
   <div id="ServiceDetail">
-    <div class="banner container-fuild text-center">相关服务</div>
+    <div class="banner container-fuild text-center">
+      Login
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3" id="myScrollspy">
           <ul class="nav nav-tabs nav-stacked center-block" id="myNav">
-            <p>特色服务</p>
+            <p>If you've already registered, sign up here.</p>
             <li
               :class="item.id==id?'active':''"
               v-for="(item,index) in serviceNavList"
@@ -105,7 +107,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url("../assets/img/banner_2.jpg");
+  background-image: url("../assets/img/banner_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
