@@ -21,7 +21,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url("../assets/img/banner_2.png");
+  background-image: url("../assets/img/banners/banner_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;

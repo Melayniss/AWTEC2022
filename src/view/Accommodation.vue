@@ -20,6 +20,19 @@
           <a href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
         </h2>
       </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
+        <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
+      </div>
+    </div>
+
+    <div class="row acc-container">
+      <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
+        <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
+        <img class="img-responsive" src="@/assets/img/hotel_2.jpeg" alt="Dragon Hotel">
+      </div>
     </div>
   </div>
 </template>
@@ -59,7 +72,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url('../assets/img/banner_3.jpg');
+  background-image: url('../assets/img/banners/banner_3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;

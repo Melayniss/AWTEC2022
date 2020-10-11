@@ -1,51 +1,85 @@
 <template>
   <div id="Preparation">
+    <!--    banner-->
     <div class="banner container-fuild text-center">
       {{ title }}
     </div>
-    <div class="container">
-      <div class="row preparationIntro-container">
-        <div class="col-xs-12 col-sm-12 col-md-6">
-          <h3>{{ subtitle }}</h3>
-          <ul>
-            <li class=".text-justify"
-                v-for="(item,index) in preparationList"
-                :key="index"
-            >
-              {{ item.text }}
-              <router-link :to="item.path">
-                {{ item.title }}
-              </router-link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <!--    杭州美食-->
+    <!--    杭州风景-->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="scene-box">
+          <div class="text-center">
+            <h2>
+              {{ scene.title }}
+            </h2>
+            <br>
+            <p style="color:#b2b2b2">
+              {{ scene.subtitle }}
+            </p>
+          </div>
 
-    <div class="container">
-      <div class="food-container row">
-        <div class="food-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
-             v-for="(item,index) in foodList"
-             :key="index">
-          <div class="food-item-wrapper">
-            <div class="food-item-top">
-              <h4>{{ item.title }}</h4>
-              <i></i>
-              <p>{{ item.subTitle }}</p>
+          <div class="container">
+            <div class="food-container row">
+              <div class="food-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
+                   v-for="(item,index) in sceneList"
+                   :key="index">
+                <div class="food-item-wrapper">
+                  <div class="food-item-top">
+                    <h4>{{ item.title }}</h4>
+                    <i></i>
+                    <p>{{ item.subtitle }}</p>
+                  </div>
+                  <div class="food-item-img">
+                    <img :src="item.img" :alt="item.description">
+                  </div>
+                  <div class="food-item-border"></div>
+                </div>
+              </div>
             </div>
-            <div class="food-item-img">
-              <img :src="item.img" :alt="item.description">
-            </div>
-            <div class="food-item-border"></div>
           </div>
         </div>
       </div>
     </div>
 
 
-    <!--    杭州风景-->
+    <!--    杭州美食-->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="food-box">
+          <div class="text-center">
+            <h2>
+              {{ food.title }}
+            </h2>
+            <br>
+            <p style="color:#b2b2b2">
+              {{ food.subtitle }}
+            </p>
+          </div>
+
+          <div class="container">
+            <div class="food-container row">
+              <div class="food-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
+                   v-for="(item,index) in foodList"
+                   :key="index">
+                <div class="food-item-wrapper">
+                  <div class="food-item-top">
+                    <h4>{{ item.title }}</h4>
+                    <i></i>
+                    <p>{{ item.subtitle }}</p>
+                  </div>
+                  <div class="food-item-img">
+                    <img :src="item.img" :alt="item.description">
+                  </div>
+                  <div class="food-item-border"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
   </div>
@@ -82,56 +116,92 @@ export default {
           path: '/preparation/us'
         }
       ],
+
+      food: {
+        title: 'Cuisine in Hangzhou',
+        subtitle: 'Fancy Food'
+      },
       foodList: [
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_1.jpg'),
+          img: require('@/assets/img/other/food_1.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_2.jpg'),
+          img: require('@/assets/img/other/food_2.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_3.jpg'),
+          img: require('@/assets/img/other/food_3.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_4.jpg'),
+          img: require('@/assets/img/other/food_4.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_5.jpg'),
+          img: require('@/assets/img/other/food_5.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_6.jpg'),
+          img: require('@/assets/img/other/food_6.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_7.jpg'),
+          img: require('@/assets/img/other/food_7.jpg'),
           description: ''
         },
         {
           title: 'Beggar\'s Chicken',
           subtitle: '',
-          img: require('@/assets/img/food_8.jpg'),
+          img: require('@/assets/img/other/food_8.jpg'),
           description: ''
         }
       ],
+
+      scene: {
+        title: 'Seasons in Hangzhou',
+        subtitle: 'Famous Scenery'
+      },
+      sceneList: [
+        {
+          title: 'Spring',
+          subtitle: 'Three Pools Reflected in the Moon',
+          img: require('../assets/img/scene/hz_spring.jpg'),
+          description: ''
+        },
+        {
+          title: 'Summer',
+          subtitle: 'Breeze-ruffled Lotus at Quyuan Garden',
+          img: require('../assets/img/scene/hz_summer.jpg'),
+          description: ''
+        },
+        {
+          title: 'Autumn',
+          subtitle: 'Sunset Glow at Leifeng Pagoda',
+          img: require('../assets/img/scene/hz_autumn.jpg'),
+          description: ''
+        },
+        {
+          title: 'Winter',
+          subtitle: 'Remnant Snow on the Broken Bridge',
+          img: require('../assets/img/scene/hz_winter.jpg'),
+          description: ''
+        }
+      ]
     }
   },
   mounted() {
@@ -146,7 +216,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url('../assets/img/banner_4.jpg');
+  background-image: url('../assets/img/banners/banner_4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
@@ -158,10 +228,6 @@ export default {
   margin-left: 0;
 }
 
-.food-container {
-  padding: 30px 50px;
-}
-
 .preparationIntro-container {
   padding: 100px 0;
   color: #808080;
@@ -171,6 +237,24 @@ export default {
 .preparationIntro-container > div > p {
   font-size: 14px;
   line-height: 2.5rem;
+}
+
+.scene-box {
+  margin: 80px 0 0 0;
+  padding: 30px;
+  transition: all ease 0.5s;
+  border: 1px dashed cornflowerblue;
+}
+
+.food-container {
+  padding: 30px 50px;
+}
+
+.food-box {
+  margin: 80px 0 0 0;
+  padding: 30px;
+  transition: all ease 0.5s;
+  border: 1px dashed coral;
 }
 
 .food-item {
@@ -257,6 +341,25 @@ export default {
 }
 </style>
 
-<!--<div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">-->
-<!--          <img class="img-responsive center-block" src="@/assets/img/about_img.png" alt="">-->
-<!--        </div>
+<!--        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">  -->
+<!--            <img class="img-responsive center-block" src="@/assets/img/xxxxxxxxxxxxx.png" alt="">  -->
+<!--        </div>  -->
+
+<!--<div class="container">-->
+<!--<div class="row preparationIntro-container">-->
+<!--  <div class="col-xs-12 col-sm-12 col-md-6">-->
+<!--    <h3>{{ subtitle }}</h3>-->
+<!--    <ul>-->
+<!--      <li class=".text-justify"-->
+<!--          v-for="(item,index) in preparationList"-->
+<!--          :key="index"-->
+<!--      >-->
+<!--        {{ item.text }}-->
+<!--        <router-link :to="item.path">-->
+<!--          {{ item.title }}-->
+<!--        </router-link>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->

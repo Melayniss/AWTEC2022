@@ -43,56 +43,9 @@
             </p>
           </div>
 
-        </div>
-      </div>
-    </div>
+          <ul>
 
-
-    <!-- Venue -->
-    <div id="getHere" class="container-fuild">
-      <div class="row getHere">
-        <!--        here needs fix. Write container box-->
-        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
-        </div>
-
-        <!--flex now-->
-        <div class="col-xs-12 col-sm-12 col-md-6"
-             style="display: flex;flex-direction: column;"
-        >
-          <h2 class="getHere-title">
-            {{ venueMsg.title }}
-            <small>{{ venueMsg.viceTitle }}</small>
-          </h2>
-          <p style="white-space: pre-line;">
-            {{ venueMsg.content }}
-          </p>
-
-          <h2>
-            <a href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
-          </h2>
-
-          <a class="btn btn-lg btn-block btn-info" @click="navigateToVenue">{{ venueMsg.detailTitle }}</a>
-        </div>
-      </div>
-    </div>
-    <!-- Contacts -->
-    <div id="contactUs" class="container-fuild text-center">
-      <div class="container contactUs-container wow slideInUp">
-        <h1>{{ contactMsg.h1 }}</h1>
-        <h3>{{ contactMsg.h3 }}</h3>
-        <button
-          class="btn btn-default btn-sm"
-          onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
-          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
-          @click="navigateToContact"
-        >
-          {{ contactMsg.title }}
-        </button>
-        <div class="contactUs-contactWay">
-          <span></span>
-          <span></span>
-          <span></span>
+          </ul>
         </div>
       </div>
     </div>
@@ -125,6 +78,55 @@
               ></div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contacts -->
+    <div id="contactUs" class="container-fuild text-center">
+      <div class="container contactUs-container wow slideInUp">
+        <h1>{{ contactMsg.h1 }}</h1>
+        <h3>{{ contactMsg.h3 }}</h3>
+        <button
+          class="btn btn-default btn-sm"
+          onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
+          onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
+          @click="navigateToContact"
+        >
+          {{ contactMsg.title }}
+        </button>
+        <div class="contactUs-contactWay">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Venue -->
+    <div id="getHere" class="container-fuild">
+      <div class="row getHere">
+        <!-- fixed -->
+        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
+          <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
+        </div>
+        <!-- flex now-->
+        <div class="col-xs-12 col-sm-12 col-md-6"
+             style="display: flex;flex-direction: column;"
+        >
+          <h2 class="getHere-title">
+            {{ venueMsg.title }}
+            <small>{{ venueMsg.viceTitle }}</small>
+          </h2>
+          <p style="white-space: pre-line;">
+            {{ venueMsg.content }}
+          </p>
+
+          <h2>
+            <a href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
+          </h2>
+
+          <a class="btn btn-lg btn-block btn-info" @click="navigateToVenue">{{ venueMsg.detailTitle }}</a>
         </div>
       </div>
     </div>
@@ -267,22 +269,22 @@ export default {
       benefitMsg,
       benefitsList: [
         {
-          logo: require("@/assets/img/tel.png"),
+          logo: require("@/assets/img/icon/conference.png"),
           title: "Date & Location",
           content: "<p>On September 11-15 of 2022</p>At Hangzhou city in China"
         },
         {
-          logo: require("@/assets/img/computer.png"),
+          logo: require("@/assets/img/icon/speakers.png"),
           title: "Conference Speakers",
           content: "<p>Five keynote speakers</p>Four invited speakers"
         },
         {
-          logo: require("@/assets/img/qq.png"),
+          logo: require("@/assets/img/icon/tours.png"),
           title: "Special Tours Planned",
           content: "<p>The ZJU Zhoushan Campus</p>Zhairuoshan Scientific Island"
         },
         {
-          logo: require("@/assets/img/skill.png"),
+          logo: require("@/assets/img/icon/register.png"),
           title: "Regular or Student",
           content: "<p>650 USD (about 4652 CNY)</p>300 USD (about 2147 CNY)"
         }
