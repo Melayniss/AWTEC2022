@@ -12,10 +12,10 @@
             <div class="speaker-item-top">
               <h4>{{ item.title }}</h4>
               <i></i>
-              <p>{{ item.subTitle }}</p>
+              <p>{{ item.subtitle }}</p>
             </div>
             <div class="speaker-item-img">
-              <img :src="item.img" alt="服务">
+              <img :src="item.img" alt="speaker">
             </div>
             <div class="speaker-item-border"></div>
           </div>
@@ -37,25 +37,25 @@ export default {
         {
           id: 'speaker1',
           title: 'Wave Energy',
-          subTitle: 'Customize App',
+          subtitle: 'Customize App',
           img: require('@/assets/img/service1.jpg')
         },
         {
           id: 'speaker2',
           title: 'Tidal Range',
-          subTitle: 'Current Energy',
+          subtitle: 'Current Energy',
           img: require('@/assets/img/service2.jpg')
         },
         {
           id: 'speaker3',
           title: 'Floating Wind Energy',
-          subTitle: 'hybrid/co-located systems',
+          subtitle: 'hybrid/co-located systems',
           img: require('@/assets/img/service3.jpg')
         },
         {
           id: 'speaker4',
           title: 'Future Development',
-          subTitle: 'Special Sessions',
+          subtitle: 'Special Sessions',
           img: require('@/assets/img/service4.jpg')
         }
       ]

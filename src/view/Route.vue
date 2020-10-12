@@ -1,14 +1,40 @@
 <template>
   <div id="Route">
     <div class="banner container-fuild text-center">
-      Route
+      {{ title }}
     </div>
     <div class="container">
-      <div class="container-fuild Contact_us-container">
-        <div class="row">
+      <div class="container-fuild">
+        <div class="route-container">
           <div class="col-xs-12 col-sm-12 col-md-6">
             <div id="map" class="wow zoomIn"></div>
           </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <h2 class="route-title">
+              {{ routeMsg.title }}
+              <small>{{ routeMsg.subtitle }}</small>
+            </h2>
+
+            <p style="white-space: pre-line;">
+              {{ routeMsg.content }}
+            </p>
+
+            <ul v-for="(item,index) in routeMsg.waysList"
+                :key="index">
+              <li>
+                <p >
+                  {{ item.content }}
+                </p>
+              </li>
+            </ul>
+
+            <h2 class="route-link">
+              <a href="http://hangzhoudragonhotel.com/">{{ routeMsg.linkTitle }}</a>
+            </h2>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -16,13 +42,26 @@
 </template>
 
 <script>
-import { WOW } from 'wowjs'
+import {WOW} from 'wowjs'
 import BMap from "BMap";
 
 export default {
   name: "Router",
   data() {
-    return {};
+    return {
+      title: 'Route',
+      routeMsg: {
+        title: 'Route',
+        subtitle: 'Transportation Ways',
+        content: 'A very broad transportation system has been established in Hangzhou, including international airports and railway stations.\n' +
+          'In order to reach the venue, you will have the following kinds of transportation routes to choose from:',
+        waysList: [
+          {
+            content: '',
+          }
+        ],
+      }
+    };
   },
   mounted() {
     var content =
@@ -71,21 +110,44 @@ export default {
   background-attachment: scroll;
   background-position: center center;
 }
-.Contact_us-container {
+
+.route-container {
   padding: 80px 0;
   transition: all ease 0.5s;
   box-sizing: border-box;
 }
+
 #map {
   width: 100%;
   height: 365px;
 }
+
 .row {
   margin-right: 0;
   margin-left: 0;
 }
+
+.route-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c4d7d6;
+  flex: auto;
+}
+
+#route p {
+  font-size: 14px;
+  color: #333;
+  line-height: 2rem;
+  flex: auto;
+}
+
+#route .route-link {
+  margin: 20px 0 20px;
+  flex: auto;
+  /*vertical-align: center;*/
+}
+
 @media screen and (max-width: 997px) {
-  .Contact_us-container {
+  .route-container {
     padding: 20px 0;
   }
 }

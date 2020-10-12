@@ -55,7 +55,7 @@
       <div class="container">
         <div class="benefits-title text-center">
           <p>{{ benefitMsg.title }}</p>
-          <p>{{ benefitMsg.viceTitle }}</p>
+          <p>{{ benefitMsg.subtitle }}</p>
         </div>
         <div class="row">
           <div
@@ -108,7 +108,7 @@
       <div class="row getHere">
         <!-- fixed -->
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
+          <img class="img-responsive" src="@/assets/img/scene/hotel_0.jpg" alt="Dragon Hotel">
         </div>
         <!-- flex now-->
         <div class="col-xs-12 col-sm-12 col-md-6"
@@ -116,7 +116,7 @@
         >
           <h2 class="getHere-title">
             {{ venueMsg.title }}
-            <small>{{ venueMsg.viceTitle }}</small>
+            <small>{{ venueMsg.subtitle }}</small>
           </h2>
           <p style="white-space: pre-line;">
             {{ venueMsg.content }}
@@ -139,7 +139,7 @@ import {WOW} from 'wowjs';
 
 const venueMsg = {
   title: "Venue",
-  viceTitle: "/ Dragon Hotel, in Hangzhou",
+  subtitle: "/ Dragon Hotel, in Hangzhou",
   content:
     "The Dragon Hotel in Hangzhou is the one of the best choices for travellers around the world to visit Hangzhou.\n" +
     "The hotel has ideal location in the heart of Hangzhou's central business district. Close to splendid shopping, and major corporate and government offices.\n" +
@@ -166,7 +166,7 @@ const committeeMsg = {
 
 const benefitMsg = {
   title: "AWTEC 2022",
-  viceTitle: "Deliver the most recent and future development."
+  subtitle: "Deliver the most recent and future development."
 }
 
 
@@ -177,11 +177,73 @@ export default {
       // photograph
       swiperList: [
         {
-          img: require("@/assets/img/scene_3.jpg"),
+          img: require("@/assets/img/scene/oc_4.jpg"),
           // path: "",
           title: 'AWTEC 2022',
           content: 'The 6th AWTEC will be held at Hangzhou city in China.',
           subContent: 'On September 11-15 of 2022.',
+        },
+        {
+          img: require("@/assets/img/scene/zju_1.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+        },
+        {
+          img: require("@/assets/img/scene/zju_2.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+        },
+        {
+          img: require("@/assets/img/scene/zju_3.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+        },
+        {
+          img: require("@/assets/img/scene/zju_4.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+          // content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
+        },
+        {
+          img: require("@/assets/img/scene/zju_5.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+        },
+        {
+          img: require("@/assets/img/scene/zju_6.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+        },
+        {
+          img: require("@/assets/img/scene/zju_3.jpg"),
+          path: "",
+          title: 'Zhejiang University',
+          // content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
+        },
+        {
+          img: require("@/assets/img/scene/oc_1.jpg"),
+          path: "",
+          title: 'Ocean College, Zhejiang University'
+        },
+        {
+          img: require("@/assets/img/scene/oc_2.jpg"),
+          path: "",
+          title: 'Ocean College, Zhejiang University'
+        },
+        {
+          img: require("@/assets/img/scene/oc_3.jpg"),
+          path: "",
+          title: 'Ocean College, Zhejiang University'
+        },
+        {
+          img: require("@/assets/img/scene/oc_5.jpg"),
+          path: "",
+          title: 'Ocean College, Zhejiang University'
+        },
+        {
+          img: require("@/assets/img/scene/oc_6.jpg"),
+          path: "",
+          title: 'Ocean College, Zhejiang University'
         },
         {
           img: require("@/assets/img/scene_6.jpg"),
@@ -189,18 +251,6 @@ export default {
           title: 'Hangzhou',
           // content: 'The capital and the most popular city of Zhejiang Province.',
           // subContent: 'Also romanized as Hangchow.'
-        },
-        {
-          img: require("@/assets/img/zju_4.jpg"),
-          // path: "",
-          title: 'Zhejiang University',
-          // content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
-        },
-        {
-          img: require("@/assets/img/zju_3.jpg"),
-          path: "",
-          title: 'Ocean College',
-          // content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
         },
       ],
 
@@ -373,7 +423,7 @@ export default {
 
 /* swiper image */
 #rotation {
-  height: 500px;
+  height: 600px;
 }
 
 #rotation .banner-swiper {

@@ -46,25 +46,21 @@ export default {
         },
         {
           title: 'Third Day',
-          introduction: '',
-          date: '09-11',
-          year: '2020'
+          introduction: 'Keynote Lectures on Tidal/Ocean Current Energy & Poster sessions',
+          date: '09-13',
+          year: '2022'
         },
         {
-          title: 'Oral Presentation',
-          introduction: 'Keynote speech for 45 minutes;' + '\n' +
-            'Invited speech for 30 minutes;' +
-            'Paper presentation for 15 or 20 minutes each.',
-          date: '09-11',
-          year: '2020'
+          title: 'Fourth Day',
+          introduction: 'Keynote Speech on Hybrid Offshore Wind Energy & Closing Ceremony',
+          date: '09-14',
+          year: '2022'
         },
         {
-          title: 'Oral Presentation',
-          introduction: 'Keynote speech for 45 minutes;' + '\n' +
-            'Invited speech for 30 minutes;' +
-            'Paper presentation for 15 or 20 minutes each.',
-          date: '09-11',
-          year: '2020'
+          title: 'Fifth Day',
+          introduction: 'Technical Tour',
+          date: '09-15',
+          year: '2022'
         }
       ],
     }
