@@ -126,8 +126,8 @@ export default {
           //     path: "/preparation/route"
           //   },
           //   {
-          //     name: "FAQ",
-          //     path: "/preparation/faq"
+          //     name: "Tours",
+          //     path: "/preparation/tours"
           //   },
           //   {
           //     name: "Contact Us",
@@ -146,8 +146,8 @@ export default {
           children: []
         },
         {
-          name: "FAQ",
-          path: "/faq",
+          name: "Tours",
+          path: "/tours",
           children: []
         },
         {

@@ -5,82 +5,432 @@
       {{ title }}
     </div>
 
-    <!--    杭州风景-->
+    <!--    会议安排-->
     <div class="container-fluid">
       <div class="container">
-        <div class="scene-box">
+        <div class="meeting-box">
           <div class="text-center">
             <h2>
-              {{ scene.title }}
+              {{ meeting.title }}
             </h2>
             <br>
-            <p style="color:#b2b2b2">
-              {{ scene.subtitle }}
+            <p style="color: #b2b2b2">
+              {{ meeting.subtitle }}
             </p>
           </div>
 
-          <div class="container">
-            <div class="food-container row">
-              <div class="food-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
-                   v-for="(item,index) in sceneList"
-                   :key="index">
-                <div class="food-item-wrapper">
-                  <div class="food-item-top">
-                    <h4>{{ item.title }}</h4>
-                    <i></i>
-                    <p>{{ item.subtitle }}</p>
-                  </div>
-                  <div class="food-item-img">
-                    <img :src="item.img" :alt="item.description">
-                  </div>
-                  <div class="food-item-border"></div>
-                </div>
-              </div>
+          <div class="container-fluid"
+               style="display:flex;align-items: center;justify-content: center;flex-direction: column">
+
+            <!--            img形式无法居中，采用pdf转html格式直接修改展示-->
+            <!--            <div class="col-xs-12 col-sm-6 col-md-3 wow slideInUp"-->
+            <!--                 style="flex: auto;width: 800px;">-->
+            <!--              <div class="meeting-img">-->
+            <!--                <img src="../assets/img/other/meeting_1.png" alt="">-->
+            <!--              </div>-->
+            <!--            </div>-->
+
+<!--            table of the conference-->
+            <div style="flex: auto">
+              <ul>
+                <li><p style="padding-left: 26pt;text-indent: -21pt;line-height: 14pt;text-align: left;">The time slots
+                  for oral presentations, start in 2022, November 11st, are</p></li>
+                <li><p style="padding-top: 9pt;padding-left: 26pt;text-indent: -21pt;text-align: left;">Keynote speech:
+                  45
+                  minutes</p></li>
+                <li><p style="padding-top: 9pt;padding-left: 26pt;text-indent: -21pt;text-align: left;">Invited speech:
+                  30
+                  minutes</p></li>
+                <li><p style="padding-top: 8pt;padding-left: 26pt;text-indent: -21pt;text-align: left;">Paper
+                  presentation: 15 or 20
+                  minutes each, depending on the tradition of AWTEC</p></li>
+              </ul>
+              <br><br>
+              <p style="text-indent: 0pt;text-align: center;">First day</p>
+              <br><br>
+              <table style="border-collapse:collapse;margin-left:5.25pt" cellspacing="0">
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-right: 9pt;text-indent: 0pt;line-height: 13pt;text-align: right;">
+                      16:00‐18:30</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Registration
+                      desk open at the Dragon Hotel, Hangzhou</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-right: 9pt;text-indent: 0pt;line-height: 13pt;text-align: right;">
+                      17:00‐18:30</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Welcome
+                      reception at the Dragon Hotel, Hangzhou</p></td>
+                </tr>
+              </table>
+              <br><br>
+              <p style="padding-top: 9pt;text-indent: 0pt;text-align: center;">Second day</p>
+              <br><br>
+              <table style="border-collapse:collapse;margin-left:5.25pt" cellspacing="0">
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      08:30‐17:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Registration
+                      desk open</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      09:00‐09:10</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Opening
+                      ceremony</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      09:10‐10:40</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Keynote
+                      lectures on wave energy</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      10:40‐11:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Break
+                      and Group
+                      Photograph</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      11:00‐12:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      Sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      12:20‐13:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Lunch</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      13:20‐15:25</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Invited
+                      speeches + Parallel sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      15:25‐15:40</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Break</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      15:40‐17:40</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      Sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      18:30‐20:30</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Reception
+                      Dinner</p></td>
+                </tr>
+              </table>
+              <br><br>
+              <p style="padding-top: 5pt;text-indent: 0pt;text-align: center;">Third day</p>
+              <br><br>
+              <table style="border-collapse:collapse;margin-left:5.25pt" cellspacing="0">
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      08:00‐17:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Registration
+                      desk open</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      08:30‐10:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 12pt;text-align: left;">Keynote
+                      Lectures on tidal/ocean current energy</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      10:00‐10:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Break</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      10:20‐12:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      Sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      12:00‐13:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Lunch</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      13:20‐15:25</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Invited
+                      speeches + Parallel sessions</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      15:25‐15:50</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Break</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      5:50‐17:30</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Poster
+                      sessions</p></td>
+                </tr>
+                <tr style="height:47pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      18:30‐21:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Organizing
+                      Committee meeting and dinner at the Dragon Hotel,</p>
+                    <p style="padding-top: 8pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">
+                      Hangzhou</p>
+                  </td>
+                </tr>
+              </table>
+              <br><br>
+              <p style="text-indent: 0pt;text-align: center;">Fourth day</p>
+              <br><br>
+              <table style="border-collapse:collapse;margin-left:5.25pt" cellspacing="0">
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      08:30‐17:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Registration
+                      desk open</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      09:00‐09:45</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Keynote
+                      speech
+                      on hybrid offshore wind energy</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      09:45‐10:10</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Break</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      10:10‐11:50</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      Sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      11:50‐13:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Lunch</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      13:20‐15:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      sessions</p></td>
+                </tr>
+                <tr style="height:23pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      15:00‐15:20</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Break</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      15:20‐17:00</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Parallel
+                      sessions</p></td>
+                </tr>
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p class="s1"
+                       style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;line-height: 13pt;text-align: center;">
+                      18:00‐20:30</p></td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Closing
+                      ceremony &amp; Conference Banquet</p></td>
+                </tr>
+              </table>
+              <br><br>
+              <p style="text-indent: 0pt;text-align: center;">Fifth day</p>
+              <br><br>
+              <table style="border-collapse:collapse;margin-left:5.25pt" cellspacing="0">
+                <tr style="height:24pt">
+                  <td
+                    style="width:90pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      9:30‐16:00</p>
+                  </td>
+                  <td
+                    style="width:361pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">
+                      Technical
+                      tour</p></td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    <!--    杭州美食-->
-    <div class="container-fluid">
-      <div class="container">
-        <div class="food-box">
-          <div class="text-center">
-            <h2>
-              {{ food.title }}
-            </h2>
-            <br>
-            <p style="color:#b2b2b2">
-              {{ food.subtitle }}
-            </p>
-          </div>
-
-          <div class="container">
-            <div class="food-container row">
-              <div class="food-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
-                   v-for="(item,index) in foodList"
-                   :key="index">
-                <div class="food-item-wrapper">
-                  <div class="food-item-top">
-                    <h4>{{ item.title }}</h4>
-                    <i></i>
-                    <p>{{ item.subtitle }}</p>
-                  </div>
-                  <div class="food-item-img">
-                    <img :src="item.img" :alt="item.description">
-                  </div>
-                  <div class="food-item-border"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
 
   </div>
 </template>
@@ -108,7 +458,7 @@ export default {
         {
           text: 'If any question bothers you →',
           title: 'FAQs',
-          path: '/preparation/faq'
+          path: '/preparation/tours'
         },
         {
           text: 'Want to get contact with the committees →',
@@ -117,91 +467,10 @@ export default {
         }
       ],
 
-      food: {
-        title: 'Cuisine in Hangzhou',
-        subtitle: 'Fancy Food'
+      meeting: {
+        title: 'Conference Detail',
+        subtitle: 'Tentative Program'
       },
-      foodList: [
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_1.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_2.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_3.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_4.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_5.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_6.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_7.jpg'),
-          description: ''
-        },
-        {
-          title: 'Beggar\'s Chicken',
-          subtitle: '',
-          img: require('@/assets/img/other/food_8.jpg'),
-          description: ''
-        }
-      ],
-
-      scene: {
-        title: 'Seasons in Hangzhou',
-        subtitle: 'Famous Scenery'
-      },
-      sceneList: [
-        {
-          title: 'Spring',
-          subtitle: 'Three Pools Reflected in the Moon',
-          img: require('../assets/img/scene/hz_spring.jpg'),
-          description: ''
-        },
-        {
-          title: 'Summer',
-          subtitle: 'Breeze-ruffled Lotus at Quyuan Garden',
-          img: require('../assets/img/scene/hz_summer.jpg'),
-          description: ''
-        },
-        {
-          title: 'Autumn',
-          subtitle: 'Sunset Glow at Leifeng Pagoda',
-          img: require('../assets/img/scene/hz_autumn.jpg'),
-          description: ''
-        },
-        {
-          title: 'Winter',
-          subtitle: 'Remnant Snow on the Broken Bridge',
-          img: require('../assets/img/scene/hz_winter.jpg'),
-          description: ''
-        }
-      ]
     }
   },
   mounted() {
@@ -210,6 +479,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .banner {
   color: #fff;
@@ -223,11 +493,6 @@ export default {
   background-position: center center;
 }
 
-.row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .preparationIntro-container {
   padding: 100px 0;
   color: #808080;
@@ -239,98 +504,21 @@ export default {
   line-height: 2.5rem;
 }
 
-.scene-box {
-  margin: 80px 0 0 0;
+.meeting-box {
+  margin: 80px 0 80px 0;
   padding: 30px;
   transition: all ease 0.5s;
-  border: 1px dashed cornflowerblue;
+  border: 1px dashed lightpink;
 }
 
-.food-container {
-  padding: 30px 50px;
-}
-
-.food-box {
-  margin: 80px 0 0 0;
-  padding: 30px;
-  transition: all ease 0.5s;
-  border: 1px dashed coral;
-}
-
-.food-item {
-  margin-bottom: 50px;
-}
-
-.food-item-wrapper {
-  cursor: pointer;
-  background: rgba(244, 244, 244, 1);
-  overflow: hidden;
+.meeting-img {
   position: relative;
-}
-
-.food-item-top {
-  width: 100%;
-  height: 120px;
-  padding: 30px;
-  text-align: center;
-}
-
-.food-item-top > i {
-  display: inline-block;
-  width: 25px;
-  height: 2px;
-  background: #28f;
-}
-
-.food-item-top > p {
-  color: #b2b2b2;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all .5s ease;
-}
-
-.food-item-img {
-  width: 100%;
   overflow: hidden;
 }
 
-.food-item-img img {
+.meeting-img img {
   width: 100%;
   transition: all 0.5s ease;
-}
-
-.food-item-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 9999999;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  border: 1px solid #000;
-  opacity: 0;
-}
-
-.food-item-wrapper:hover .food-item-top > i {
-  opacity: 0;
-}
-
-.food-item-wrapper:hover .food-item-top > p {
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
-.food-item-wrapper:hover .food-item-img > img {
-  transform: scale(1.1, 1.1);
-}
-
-.food-item-wrapper:hover > .food-item-border {
-  opacity: 1;
-  width: 90%;
-  height: 90%;
 }
 
 @media screen and (max-width: 997px) {

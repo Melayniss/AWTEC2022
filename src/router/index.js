@@ -10,7 +10,7 @@ import Speaker from "../view/Speaker";
 import Preparation from "../view/Preparation";
 import Accommodation from "../view/Accommodation";
 import Route from "../view/Route";
-import FAQ from "../view/FAQ";
+import Tours from "../view/Tours";
 import Sponsorship from "../view/Sponsorship";
 import Dates from "../view/KeyDates";
 import Programs from "../view/Programs";
@@ -124,8 +124,8 @@ const routes = [
     //     }
     //   },
     //   {
-    //     path: 'faq',
-    //     component: FAQ,
+    //     path: 'tours',
+    //     component: Tours,
     //     meta: {
     //       title: 'AWTEC 2022: FAQs'
     //     }
@@ -157,8 +157,8 @@ const routes = [
     }
   },
   {
-    path: '/faq',
-    component: FAQ,
+    path: '/tours',
+    component: Tours,
     meta: {
       title: 'AWTEC 2022: FAQs'
     }

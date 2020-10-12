@@ -3,6 +3,8 @@
     <div class="banner container-fuild text-center">
       {{ title }}
     </div>
+
+    <!--    黄龙酒店-->
     <div id="acc" class="row acc-container">
 <!--      <div class="col-xs-12 col-sm-12 col-md-6">-->
 <!--        <Map></Map>-->
@@ -25,7 +27,6 @@
         <img class="img-responsive" src="@/assets/img/hotel_0.jpg" alt="Dragon Hotel">
       </div>
     </div>
-
     <div class="row acc-container">
       <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
         <img class="img-responsive" src="@/assets/img/hotel_1.jpg" alt="Dragon Hotel">

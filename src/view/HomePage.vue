@@ -187,8 +187,8 @@ export default {
           img: require("@/assets/img/scene_6.jpg"),
           // path: "",
           title: 'Hangzhou',
-          content: 'The capital and the most popular city of Zhejiang Province.',
-          subContent: 'Also romanized as Hangchow.'
+          // content: 'The capital and the most popular city of Zhejiang Province.',
+          // subContent: 'Also romanized as Hangchow.'
         },
         {
           img: require("@/assets/img/zju_4.jpg"),
@@ -527,7 +527,8 @@ export default {
 
 /* What we have */
 #benefits {
-  padding: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #benefits .benefits-title {
@@ -544,7 +545,7 @@ export default {
 }
 
 #benefits .server-block {
-  padding: 50px 20px;
+  padding: 20px 20px;
   border: 1px solid #c4d7d6;
   border-bottom: 5px solid #c4d7d6;
 }
