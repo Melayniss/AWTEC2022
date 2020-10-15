@@ -5,6 +5,29 @@
       {{ title }}
     </div>
 
+    <!--    visa-->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="visa-box">
+          <div class="text-center">
+            <h2>
+              {{ visa.title }}
+            </h2>
+            <br>
+            <p style="color: #b2b2b2">
+              {{ visa.subtitle }}
+            </p>
+          </div>
+
+          <div class="container-fluid">
+            <p class="visa-p" v-for="(item) in visa.content">
+              {{ item.p }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--    会议安排-->
     <div class="container-fluid">
       <div class="container">
@@ -30,10 +53,10 @@
             <!--              </div>-->
             <!--            </div>-->
 
-<!--            table of the conference-->
+            <!--            table of the conference-->
             <div style="flex: auto">
               <ul>
-                <li><p style="padding-left: 26pt;text-indent: -21pt;line-height: 14pt;text-align: left;">The time slots
+                <li><p style="padding-top: 9pt;padding-left: 26pt;text-indent: -21pt;text-align: left;">The time slots
                   for oral presentations, start in 2022, November 11st, are</p></li>
                 <li><p style="padding-top: 9pt;padding-left: 26pt;text-indent: -21pt;text-align: left;">Keynote speech:
                   45
@@ -443,7 +466,7 @@ export default {
     return {
       title: 'Preparation',
       subtitle: 'Pre-Work You Need to Focus',
-      Route: '',
+      Transportation: '',
       preparationList: [
         {
           text: 'Where you will live →',
@@ -452,8 +475,8 @@ export default {
         },
         {
           text: 'How you come here →',
-          title: 'Route',
-          path: '/preparation/route'
+          title: 'Transportation',
+          path: '/preparation/transportation'
         },
         {
           text: 'If any question bothers you →',
@@ -466,6 +489,37 @@ export default {
           path: '/preparation/us'
         }
       ],
+
+      visa: {
+        title: 'Visa',
+        subtitle: 'Essential Works',
+        content: [
+          {
+            p: 'In general, most visitors will be required to show a Chinese visa when entering China. We strongly advise that participants should arrange for their visas application at least TWO months before their departure for China. It is advised to consult the nearest Chinese diplomatic mission for more information about the visa application.'
+          },
+          {
+            p: 'We will issue an official invitation letter for Visa application on request. The participants need send the filled registration form of required information of invitation letter for VISA and the scanned passport to the specific mailbox. If the participants come to China with family members, please also provide the corresponding information of the family members. We will generate an official invitation letter to include them. Our secretariat will deal with the requirement at regular time, and post the invitation letter to the supplied address by express.'
+          },
+          {
+            p: 'Moreover, participants need to provide the following documents to apply for a BUSINESS visa to participate in the AWTEC 2022:'
+          },
+          {
+            p: '* A completed visa application form ;'
+          },
+          {
+            p: '* One recent passport photograph ;'
+          },
+          {
+            p: '* Current passport which is valid for over 6 months from the date of entry into China ;'
+          },
+          {
+            p: '* Return flight tickets ;'
+          },
+          {
+            p: '* Hotel confirmation letter ;'
+          }
+        ]
+      },
 
       meeting: {
         title: 'Conference Detail',
@@ -504,6 +558,21 @@ export default {
   line-height: 2.5rem;
 }
 
+.visa-box {
+  margin: 80px 0 0 0;
+  padding: 30px;
+  transition: all ease 0.5s;
+  border: 1px dashed indianred;
+}
+
+.visa-p {
+  padding-left: 20pt;
+  text-indent: -21pt;
+  line-height: 14pt;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
 .meeting-box {
   margin: 80px 0 80px 0;
   padding: 30px;
@@ -511,15 +580,6 @@ export default {
   border: 1px dashed lightpink;
 }
 
-.meeting-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.meeting-img img {
-  width: 100%;
-  transition: all 0.5s ease;
-}
 
 @media screen and (max-width: 997px) {
   .preparationIntro-container {
@@ -532,6 +592,18 @@ export default {
 <!--        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">  -->
 <!--            <img class="img-responsive center-block" src="@/assets/img/xxxxxxxxxxxxx.png" alt="">  -->
 <!--        </div>  -->
+
+
+<!--.meeting-img {-->
+<!--position: relative;-->
+<!--overflow: hidden;-->
+<!--}-->
+
+<!--.meeting-img img {-->
+<!--width: 100%;-->
+<!--transition: all 0.5s ease;-->
+<!--}-->
+
 
 <!--<div class="container">-->
 <!--<div class="row preparationIntro-container">-->

@@ -43,8 +43,16 @@
             </p>
           </div>
 
-          <ul>
-
+          <ul v-for="(item,index) in developmentsList"
+              :key="index" style="padding: 0 80px;">
+            <li>
+              <p class="devList-p">
+                <em class="devList-em">
+                  {{ item.start }}
+                </em>
+                {{ item.content }}
+              </p>
+            </li>
           </ul>
         </div>
       </div>
@@ -59,15 +67,13 @@
         </div>
         <div class="row">
           <div
-            class="col-xs-12 col-sm-6 col-md-3 server-wrapper"
+            class="col-xs-12 col-sm-6 col-md-3"
             v-for="(item,index) in benefitsList"
-            :key="index"
-          >
+            :key="index">
             <div
-              class="server-block wow slideInUp"
+              class="be-block wow slideInUp"
               onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
-              onmouseleave="this.style.color='#666';this.style.borderColor='#c4d7d6'"
-            >
+              onmouseleave="this.style.color='#666';this.style.borderColor='#c4d7d6'">
               <img class="center-block" :src="item.logo" alt="logo">
               <p class="text-center">{{ item.title }}</p>
               <div
@@ -257,11 +263,37 @@ export default {
       development,
       developmentsList: [
         {
-          title: "the 13th Five-year Plan for Marine Renewable Energy (2016-2020)"
+          start: 'China',
+          content: ' is the largest energy-consuming country in the world at present, accounting for approximately one-fifth of the world\'s total energy consumption.'
         },
         {
-          title: "the National Key Research and Development Program",
+          start: 'By',
+          content: ' 2030, China’s energy consumption is expected to increase by 60%. In particular, China has great potential for ocean energy development in areas of the Bohai, Yellow, East China and South China sea along the country’s coastline from north to south. '
         },
+        {
+          start: 'Ocean',
+          content: ' energy is promoted by the Chinese government as an important renewable source of energy and plays an important role in supporting the adjustment of the national industrial structure, fostering new industries and exploring reformation of its energy mix. '
+        },
+        {
+          start: 'In',
+          content: ' recent years, China has attached increasing importance to ocean energy and comprehensively promoted the research, application and management of its development and utilization.',
+        },
+        {
+          start: 'In',
+          content: ' terms of policies, the 13th Five-year Plan for Marine Renewable Energy (2016-2020) was released by State Oceanic Administration in 2016, aiming to promote the demonstration and application of marine renewable energy; focus on the breakthroughs in key technologies; improve the technology levels of marine renewable energy; strengthen the construction of public service platform; and foster international cooperation in development of ocean energy.',
+        },
+        {
+          start: 'The',
+          content: ' Ministry of Science and Technology in China has also released the National Key Research and Development Program since 2018 to support the R&D of ocean energy harvesting. In terms of funding, since 2010, the special fund for marine renewable energy has provided a total of 200 million USD for 114 demonstration projects in China. By the end of 2018, the total installed capacity of ocean energy in China is 7.4 MW, and the cumulative output exceeds 235 GWh.',
+        },
+        {
+          start: 'Among',
+          content: ' them, tidal range energy is 4.35 MW and 232 GWh; tidal current energy is 2.86 MW and with power generation more than 3.5 GWh, wave energy is 0.2 MW with the cumulative power output over 0.15 GWh. Besides, the offshore wind industry in China has been booming in the past few years, indicating great potential for integrated power generation by combining wind and wave/tidal energy, as it is a viable way of reducing the cost of energy.',
+        },
+        {
+          start: 'By',
+          content: ' 2020, the total installed capacity of ocean renewable energy in China is expected to be more than 50 MW.',
+        }
         //有其他的成就就往里面加
       ],
 
@@ -273,42 +305,42 @@ export default {
       committeeMsg,
       committeeList: [
         {
-          logo: require("@/assets/img/local_0.jpg"),
+          logo: require("@/assets/img/prof/local_0.jpg"),
           title:
             "Prof. Dahai ZHANG, Zhejiang University",
           content:
             "An outstanding young scientist in the field of ocean science and technology. Served as the deputy secretary general of the Ocean Technology and Equipment Committee of the China Ocean Society, the member of the Ocean Renewable Energy System Committee of the CCICED."
         },
         {
-          logo: require("@/assets/img/local_1.jpg"),
+          logo: require("@/assets/img/prof/local_1.jpg"),
           title:
             "Prof. Wei LI, Zhejiang University",
           content:
             "The executive director of China Renewable Energy Society, director of the Special Committee of Ocean Energy, the expert judge of mechanical subject of the National Natural Science Foundation of China. Having more than 60 authorized invention patents at home and abroad."
         },
         {
-          logo: require("@/assets/img/local_2.jpg"),
+          logo: require("@/assets/img/prof/local_2.jpg"),
           title:
             "Dr. Yulin SI, Zhejiang University",
           content:
             "Mainly engaged in the research on offshore wind energy and marine energy, marine equipment intelligent control etc. He has been the PI for projects from Natural Science Foundation of China, China Shipbuilding Industry Corporation etc."
         },
         {
-          logo: require("@/assets/img/local_3.jpg"),
+          logo: require("@/assets/img/prof/local_3.jpg"),
           title:
             "Dr. Lin CUI, National Ocean Technology Center",
           content:
             "Dr. Cui from National Ocean Technology Center, is the deputy director of the ocean energy research office in National Ocean Technology Center. He is mainly engaged in the R&D and policy studies of ocean wave and tidal energy and their development in China."
         },
         {
-          logo: require("@/assets/img/local_4.jpg"),
+          logo: require("@/assets/img/prof/local_4.jpg"),
           title:
             "Prof. Dezhi NING, Dalian University of Technology",
           content:
             "Mainly engaged in the research on the characteristics of water waves and the interaction between water waves and ocean structures. Ppublished more than 140 academic papers in well-known journals and international conferences at home and abroad."
         },
         {
-          logo: require("@/assets/img/local_5.jpg"),
+          logo: require("@/assets/img/prof/local_5.jpg"),
           title:
             "Prof. Hongda SHI, Ocean University of China",
           content:
@@ -473,6 +505,15 @@ export default {
   border: 1px dashed lightseagreen;
 }
 
+.devList-p {
+  text-indent: 20px;
+}
+
+.devList-em {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 /* GET HERE PART */
 #getHere {
   padding: 80px;
@@ -594,23 +635,23 @@ export default {
   font-size: 14px;
 }
 
-#benefits .server-block {
+#benefits .be-block {
   padding: 20px 20px;
   border: 1px solid #c4d7d6;
   border-bottom: 5px solid #c4d7d6;
 }
 
-#benefits .server-block img {
+#benefits .be-block img {
   width: 48px;
   height: 48px;
 }
 
-#benefits .server-block > p {
+#benefits .be-block > p {
   font-size: 20px;
   margin: 30px 0;
 }
 
-#benefits .server-block > div {
+#benefits .be-block > div {
   color: #c4d7d6;
 }
 
@@ -701,23 +742,23 @@ export default {
     font-size: 12px;
   }
 
-  #benefits .server-block {
+  #benefits .be-block {
     padding: 50px 0;
     border: 1px solid #c4d7d6;
     border-bottom: 5px solid #c4d7d6;
   }
 
-  #benefits .server-block img {
+  #benefits .be-block img {
     width: 48px;
     height: 48px;
   }
 
-  #benefits .server-block > p {
+  #benefits .be-block > p {
     font-size: 20px;
     margin: 30px 0;
   }
 
-  #benefits .server-block > div {
+  #benefits .be-block > div {
     color: #c4d7d6;
   }
 }

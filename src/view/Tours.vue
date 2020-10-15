@@ -18,7 +18,7 @@
             </p>
           </div>
 
-          <div class="container">
+          <div class="container-fluid">
             <div class="box-container row">
               <div class="box-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
                    v-for="(item,index) in sceneList"
@@ -55,7 +55,7 @@
             </p>
           </div>
 
-          <div class="container">
+          <div class="container-fluid">
             <div class="box-container row">
               <div class="box-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
                    v-for="(item,index) in foodList"
@@ -199,16 +199,15 @@ export default {
   margin-left: 0;
 }
 
+.box-container {
+  padding: 30px 20px;
+}
 
 .scene-box {
   margin: 80px 0 0 0;
   padding: 30px;
   transition: all ease 0.5s;
   border: 1px dashed cornflowerblue;
-}
-
-.box-container {
-  padding: 30px 50px;
 }
 
 .food-box {

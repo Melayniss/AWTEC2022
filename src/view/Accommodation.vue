@@ -123,11 +123,6 @@ export default {
   background-position: center center;
 }
 
-#map {
-  width: 100%;
-  height: 365px;
-}
-
 .acc-container {
   padding: 30px 50px;
   transition: all ease 0.6s;

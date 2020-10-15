@@ -1,70 +1,85 @@
 <template>
   <div id="Us">
-    <div class="banner container-fuild text-center">{{ title }}</div>
-    <div class="container">
-      <div class="container-fuild Contact_us-container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">{{ form.name }}</label>
-                <div class="col-sm-10 col-xs-12">
-                  <input type="text" class="form-control" id="name" :placeholder="form.nameDes">
+    <div class="banner container-fuild text-center">
+      {{ title }}
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="us-box">
+          <div class="text-center">
+            <h2>
+              {{ contactMsg.title }}
+            </h2>
+            <p style="color: #b2b2b2;padding-bottom: 20px">
+              {{ contactMsg.subtitle }}
+            </p>
+          </div>
+
+          <div class="container-fluid"
+               style="display:flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: row">
+            <div
+              class="col-xs-12 col-sm-6 col-md-3"
+              style="flex: auto"
+              v-for="(item,index) in contactMsg.content"
+              :key="index">
+              <div
+                class="c-block wow slideInUp"
+                onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
+                onmouseleave="this.style.color='#666';this.style.borderColor='#c4d7d6'">
+                <img class="center-block"
+                     style="width: 112px;height: 150px;"
+                     :src="item.photo" alt="">
+                <p class="text-center">{{ item.name }}</p>
+                <div
+                  class="text-center"
+                  onmouseenter="this.style.color='#28f'"
+                  onmouseleave="this.style.color='#c4d7d6'">
+                  {{ item.intro }}
+                  <br>
+                  {{ item.phone }}
+                  <br>
+                  {{ item.email }}
                 </div>
               </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">{{ form.email }}</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="email" :placeholder="form.emailDes">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="tel" class="col-sm-2 control-label">{{ form.phone }}</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="tel" :placeholder="form.phoneDes">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="content" class="col-sm-2 control-label">{{ form.remark }}</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="content" rows="8" :placeholder="form.remarkDes"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default btn-block">{{ submit }}</button>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import { WOW } from 'wowjs'
-import BMap from "BMap";
-
-const form = {
-  name: 'Name',
-  nameDes: 'Such as \'Tom\'',
-  email: 'Email',
-  emailDes: 'Tom@xxx.com',
-  phone: 'Phone',
-  phoneDes: '123-12345678',
-  remark: 'Remark',
-  remarkDes: 'What\'s the problems? Any help we can offer you?'
-}
-
 export default {
   name: "Us",
   data() {
     return {
       title: 'Contact Us',
-      form,
-      submit: 'Submit'
+      contactMsg: {
+        title: 'Contact Details',
+        subtitle: 'For all further queries, please contact',
+        content: [
+          {
+            name: 'Prof. Dahai ZHANG',
+            photo: require('@/assets/img/prof/local_0.jpg'),
+            intro: '',
+            phone: 'Phone: (86) 13758255738',
+            email: 'Email: zhangdahai@zju.edu.cn'
+          },
+          {
+            name: 'Dr. Yulin SI',
+            photo: require('@/assets/img/prof/local_2.jpg'),
+            intro: '',
+            phone: 'Phone: (86) 18072662685',
+            email: 'Email: yulinsi@zju.edu.cn'
+          }
+        ]
+      }
     };
   },
 };
@@ -82,15 +97,33 @@ export default {
   background-attachment: scroll;
   background-position: center center;
 }
-.Contact_us-container {
-  padding: 80px 0;
+
+.us-box {
+  margin: 40px 0 80px 0;
   transition: all ease 0.5s;
-  box-sizing: border-box;
+  /*border: 1px dashed mediumpurple;*/
 }
-.row {
-  margin-right: 0;
-  margin-left: 0;
+
+.c-block {
+  padding: 20px 20px;
+  border: 1px solid #c4d7d6;
+  border-bottom: 5px solid #c4d7d6;
 }
+
+.c-block img {
+  width: 48px;
+  height: 48px;
+}
+
+.c-block > p {
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.c-block > div {
+  color: #c4d7d6;
+}
+
 @media screen and (max-width: 997px) {
   .Contact_us-container {
     padding: 20px 0;

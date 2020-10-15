@@ -1,5 +1,9 @@
 <template>
   <div id="Routine">
+    <div class="banner container-fuild text-center">
+      {{ title }}
+    </div>
+
     <div class="container">
       <div class="container text-center">
         <h3>Conference Routine</h3>
@@ -30,6 +34,7 @@ export default {
   name: 'Routine',
   data(){
     return{
+      title: 'Summary',
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
       routineList:[
         {
@@ -56,6 +61,18 @@ export default {
 }
 </script>
 <style scoped>
+.banner {
+  color: #fff;
+  font-size: 30px;
+  height: 150px;
+  line-height: 150px;
+  background-image: url('../assets/img/banners/banner_6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
 .nav{
   margin: 20px 0;
 }
@@ -77,6 +94,7 @@ export default {
   color: #93b5cf;
   border-color: #93b5cf;
 }
+
 .more{
   font-size: 25px;
   color: #707070;

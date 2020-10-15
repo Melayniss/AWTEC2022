@@ -6,8 +6,8 @@
     <p class="title">Contact Us in following ways</p>
     <p class="address_tel_fax">
       <span>Address: Dragon Hotel</span>
-      <span>Tel: 888-888-888</span>
-      <span>WeChat: 8888-88888888</span>
+      <span>Tel: </span>
+      <span>WeChat Official: </span>
     </p>
     <p class="email_wx">
       <span>E-mail: zhangdahai@zju.edu.cn</span>

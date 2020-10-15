@@ -5,9 +5,15 @@
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="pull-left">
-          <span class="glyphicon glyphicon-user"></span>Contact us by
-          <span class="glyphicon glyphicon-earphone"></span>xxxx-xxxxxxxx
-          <span class="glyphicon glyphicon-envelope"></span>zhangdahai@zju.edu.cn
+          For all further queries, please contact
+          <span class="glyphicon glyphicon-user"></span>
+          {{ zhang.name }}
+          <span class="glyphicon glyphicon-envelope"></span>
+          {{ zhang.email }}
+          <span class="glyphicon glyphicon-user"></span>
+          {{ si.name }}
+          <span class="glyphicon glyphicon-envelope"></span>
+          {{ si.email }}
         </div>
       </div>
     </div>
@@ -79,6 +85,15 @@ export default {
   name: "Header",
   data() {
     return {
+      zhang: {
+        name: 'Prof. Dahai ZHANG',
+        email: 'zhangdahai@zju.edu.cn'
+      },
+      si: {
+        name: 'Dr. Yulin SI',
+        email: 'yulinsi@zju.edu.cn'
+      },
+
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
       menuName: "Navigation",
       menuClass: "glyphicon glyphicon-menu-down",
@@ -122,8 +137,8 @@ export default {
           //     path: "/preparation/accommodation"
           //   },
           //   {
-          //     name: "Route",
-          //     path: "/preparation/route"
+          //     name: "Transportation",
+          //     path: "/preparation/transportation"
           //   },
           //   {
           //     name: "Tours",
@@ -141,8 +156,8 @@ export default {
           children: []
         },
         {
-          name: "Route",
-          path: "/route",
+          name: "Transportation",
+          path: "/transportation",
           children: []
         },
         {

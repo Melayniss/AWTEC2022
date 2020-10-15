@@ -9,7 +9,7 @@ import Routine from "../view/Routine";
 import Speaker from "../view/Speaker";
 import Preparation from "../view/Preparation";
 import Accommodation from "../view/Accommodation";
-import Route from "../view/Route";
+import Transportation from "../view/Transportation";
 import Tours from "../view/Tours";
 import Sponsorship from "../view/Sponsorship";
 import Dates from "../view/KeyDates";
@@ -116,11 +116,11 @@ const routes = [
     //     }
     //   },
     //   {
-    //     path: 'route',
-    //     name: 'route',
-    //     component: Route,
+    //     path: 'transportation',
+    //     name: 'transportation',
+    //     component: Transportation,
     //     meta: {
-    //       title: 'AWTEC 2022: The Route towards Destination'
+    //       title: 'AWTEC 2022: The Transportation towards Destination'
     //     }
     //   },
     //   {
@@ -149,11 +149,11 @@ const routes = [
     }
   },
   {
-    path: '/route',
-    name: 'route',
-    component: Route,
+    path: '/transportation',
+    name: 'transportation',
+    component: Transportation,
     meta: {
-      title: 'AWTEC 2022: The Route towards Destination'
+      title: 'AWTEC 2022: The Transportation towards Destination'
     }
   },
   {
