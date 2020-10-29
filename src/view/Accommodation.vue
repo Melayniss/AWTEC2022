@@ -79,28 +79,28 @@ export default {
       venueMsg,
       photosList: [
         {
-          imgSrc1: require("@/assets/img/scene/hotel_1.jpg"),
-          imgSrc2: require("@/assets/img/scene/hotel_2.jpeg"),
+          imgSrc1: url("@/assets/img/scene/hotel_1.jpg"),
+          imgSrc2: url("@/assets/img/scene/hotel_2.jpeg"),
           title: 'Panoramic Overview'
         },
         {
-          imgSrc1: require("@/assets/img/scene/hotel_7.jpg"),
-          imgSrc2: require("@/assets/img/scene/hotel_8.jpg"),
+          imgSrc1: url("@/assets/img/scene/hotel_7.jpg"),
+          imgSrc2: url("@/assets/img/scene/hotel_8.jpg"),
           title: 'Yard and Cafeteria'
         },
         {
-          imgSrc1: require("@/assets/img/scene/hotel_4.jpg"),
-          imgSrc2: require("@/assets/img/scene/hotel_5.jpg"),
+          imgSrc1: url("@/assets/img/scene/hotel_4.jpg"),
+          imgSrc2: url("@/assets/img/scene/hotel_5.jpg"),
           title: 'Conference Center'
         },
         {
-          imgSrc1: require("@/assets/img/scene/hotel_6.jpg"),
-          imgSrc2: require("@/assets/img/scene/hotel_3.jpg"),
+          imgSrc1: url("@/assets/img/scene/hotel_6.jpg"),
+          imgSrc2: url("@/assets/img/scene/hotel_3.jpg"),
           title: 'Courtyard Restaurant'
         },
         {
-          imgSrc1: require("@/assets/img/scene/hotel_9.jpg"),
-          imgSrc2: require("@/assets/img/scene/hotel_10.jpg"),
+          imgSrc1: url("@/assets/img/scene/hotel_9.jpg"),
+          imgSrc2: url("@/assets/img/scene/hotel_10.jpg"),
           title: 'Chinese Classical Charm'
         },
       ],
