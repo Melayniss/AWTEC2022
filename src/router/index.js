@@ -185,5 +185,6 @@ const routes = [
 
 export default new Router({
   routes: routes,
-  mode: 'history'
+  mode: 'history',
+  base: '/awtec-admin/'
 })

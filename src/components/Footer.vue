@@ -5,15 +5,12 @@
     </div>
     <p class="title">Contact Us in following ways</p>
     <p class="address_tel_fax">
-      <span>Address: Dragon Hotel</span>
-      <span>Tel: </span>
-      <span>WeChat Official: </span>
+      <span>Address: Room 423, Ocean Engineering Building, Zhoushan 316021, P.R. China</span>
     </p>
     <p class="email_wx">
-      <span>E-mail: zhangdahai@zju.edu.cn</span>
-      <span>Facebook: To be fulfill</span>
+      <span>E-mail: zhangdahai@zju.edu.cn or yulinsi@zju.edu.cn</span>
     </p>
-    <p class="copyright">Copyright &copy; 2018 - 2019 Melayniss</p>
+    <p class="copyright">Copyright &copy; 2020 - 2023 melayniss@zju.edu.cn</p>
   </div>
 </template>
 <script>
