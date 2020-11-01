@@ -66,14 +66,14 @@ export default {
         content: [
           {
             name: 'Prof. Dahai ZHANG',
-            photo: url('@/assets/img/prof/local_0.jpg'),
+            photo: require("../assets/img/prof/local_0.jpg"),
             intro: '',
             phone: 'Phone: (86) 13758255738',
             email: 'Email: zhangdahai@zju.edu.cn'
           },
           {
             name: 'Dr. Yulin SI',
-            photo: url('@/assets/img/prof/local_2.jpg'),
+            photo: require("../assets/img/prof/local_2.jpg"),
             intro: '',
             phone: 'Phone: (86) 18072662685',
             email: 'Email: yulinsi@zju.edu.cn'

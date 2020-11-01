@@ -96,49 +96,49 @@ export default {
         {
           title: 'Lotus Rhizome with Sticky Rice',
           subtitle: '',
-          img: url('@/assets/img/other/food_1.jpg'),
+          img: require("../assets/img/other/food_1.jpg"),
           description: ''
         },
         {
           title: 'Dongpo\'s braised pork',
           subtitle: '',
-          img: url('@/assets/img/other/food_2.jpg'),
+          img: require("../assets/img/other/food_2.jpg"),
           description: ''
         },
         {
           title: 'Stir-fried Shrimps with Longjing Tea',
           subtitle: '',
-          img: url('@/assets/img/other/food_3.jpg'),
+          img: require("../assets/img/other/food_3.jpg"),
           description: ''
         },
         {
           title: 'West Lake Fish in Vinegar Gravy',
           subtitle: '',
-          img: url('@/assets/img/other/food_4.jpg'),
+          img: require("../assets/img/other/food_4.jpg"),
           description: ''
         },
         {
           title: 'Longjing Tea',
           subtitle: '',
-          img: url('@/assets/img/other/food_5.jpg'),
+          img: require("../assets/img/other/food_5.jpg"),
           description: ''
         },
         {
           title: 'ShallotStuffed Pancake',
           subtitle: '',
-          img: url('@/assets/img/other/food_6.jpg'),
+          img: require("../assets/img/other/food_6.jpg"),
           description: ''
         },
         {
           title: 'Southern Song Victory Cake',
           subtitle: 'or Dingsheng Cake',
-          img: url('@/assets/img/other/food_7.jpg'),
+          img: require("../assets/img/other/food_7.jpg"),
           description: ''
         },
         {
           title: 'Osmanthus cake',
           subtitle: '',
-          img: url('@/assets/img/other/food_8.jpg'),
+          img: require("../assets/img/other/food_8.jpg"),
           description: ''
         }
       ],
@@ -151,25 +151,25 @@ export default {
         {
           title: 'Spring',
           subtitle: 'Three Pools Reflected in the Moon',
-          img: url('../assets/img/scene/hz_spring.jpg'),
+          img: require('../assets/img/scene/hz_spring.jpg'),
           description: ''
         },
         {
           title: 'Summer',
           subtitle: 'Breeze-ruffled Lotus at Quyuan Garden',
-          img: url('../assets/img/scene/hz_summer.jpg'),
+          img: require('../assets/img/scene/hz_summer.jpg'),
           description: ''
         },
         {
           title: 'Autumn',
           subtitle: 'Sunset Glow at Leifeng Pagoda',
-          img: url('../assets/img/scene/hz_autumn.jpg'),
+          img: require('../assets/img/scene/hz_autumn.jpg'),
           description: ''
         },
         {
           title: 'Winter',
           subtitle: 'Remnant Snow on the Broken Bridge',
-          img: url('../assets/img/scene/hz_winter.jpg'),
+          img: require('../assets/img/scene/hz_winter.jpg'),
           description: ''
         }
       ]

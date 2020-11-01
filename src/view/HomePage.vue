@@ -114,7 +114,7 @@
       <div class="row getHere">
         <!-- fixed -->
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" src="@/assets/img/scene/hotel_0.jpg" alt="Dragon Hotel">
+          <img class="img-responsive" src="../assets/img/scene/hotel_0.jpg" alt="Dragon Hotel">
         </div>
         <!-- flex now-->
         <div class="col-xs-12 col-sm-12 col-md-6"
@@ -129,7 +129,7 @@
           </p>
 
           <h2>
-            <a href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
+            <a class="getHere-link" href="http://hangzhoudragonhotel.com/">{{ venueMsg.linkTitle }}</a>
           </h2>
 
           <a class="btn btn-lg btn-block btn-info" @click="navigateToVenue">{{ venueMsg.detailTitle }}</a>
@@ -142,6 +142,7 @@
 <script>
 import Swiper from "swiper";
 import {WOW} from 'wowjs';
+import * as url from "url";
 
 const venueMsg = {
   title: "Venue",
@@ -183,76 +184,76 @@ export default {
       // photograph
       swiperList: [
         {
-          img: url("@/assets/img/scene/oc_4.jpg"),
+          img: require("../assets/img/scene/oc_4.jpg"),
           // path: "",
           title: 'AWTEC 2022',
           content: 'The 6th AWTEC will be held at Hangzhou city in China.',
           subContent: 'On September 11-15 of 2022.',
         },
         {
-          img: url("@/assets/img/scene/zju_1.jpg"),
+          img: require("../assets/img/scene/zju_1.jpg"),
           path: "",
           title: 'Zhejiang University',
         },
         {
-          img: url("@/assets/img/scene/zju_2.jpg"),
+          img: require("../assets/img/scene/zju_2.jpg"),
           path: "",
           title: 'Zhejiang University',
         },
         {
-          img: url("@/assets/img/scene/zju_3.jpg"),
+          img: require("../assets/img/scene/zju_3.jpg"),
           path: "",
           title: 'Zhejiang University',
         },
         {
-          img: url("@/assets/img/scene/zju_4.jpg"),
+          img: require("../assets/img/scene/zju_4.jpg"),
           path: "",
           title: 'Zhejiang University',
           // content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
         },
         {
-          img: url("@/assets/img/scene/zju_5.jpg"),
+          img: require("../assets/img/scene/zju_5.jpg"),
           path: "",
           title: 'Zhejiang University',
         },
         {
-          img: url("@/assets/img/scene/zju_6.jpg"),
+          img: require("../assets/img/scene/zju_6.jpg"),
           path: "",
           title: 'Zhejiang University',
         },
         {
-          img: url("@/assets/img/scene/zju_3.jpg"),
+          img: require("../assets/img/scene/zju_3.jpg"),
           path: "",
           title: 'Zhejiang University',
           // content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
         },
         {
-          img: url("@/assets/img/scene/oc_1.jpg"),
+          img: require("../assets/img/scene/oc_1.jpg"),
           path: "",
           title: 'Ocean College, Zhejiang University'
         },
         {
-          img: url("@/assets/img/scene/oc_2.jpg"),
+          img: require("../assets/img/scene/oc_2.jpg"),
           path: "",
           title: 'Ocean College, Zhejiang University'
         },
         {
-          img: url("@/assets/img/scene/oc_3.jpg"),
+          img: require("../assets/img/scene/oc_3.jpg"),
           path: "",
           title: 'Ocean College, Zhejiang University'
         },
         {
-          img: url("@/assets/img/scene/oc_5.jpg"),
+          img: require("../assets/img/scene/oc_5.jpg"),
           path: "",
           title: 'Ocean College, Zhejiang University'
         },
         {
-          img: url("@/assets/img/scene/oc_6.jpg"),
+          img: require("../assets/img/scene/oc_6.jpg"),
           path: "",
           title: 'Ocean College, Zhejiang University'
         },
         {
-          img: url("@/assets/img/scene_6.jpg"),
+          img: require("../assets/img/scene_6.jpg"),
           // path: "",
           title: 'Hangzhou',
           // content: 'The capital and the most popular city of Zhejiang Province.',
@@ -305,42 +306,42 @@ export default {
       committeeMsg,
       committeeList: [
         {
-          logo: url("@/assets/img/prof/local_0.jpg"),
+          logo: require("../assets/img/prof/local_0.jpg"),
           title:
             "Prof. Dahai ZHANG, Zhejiang University",
           content:
             "An outstanding young scientist in the field of ocean science and technology. Served as the deputy secretary general of the Ocean Technology and Equipment Committee of the China Ocean Society, the member of the Ocean Renewable Energy System Committee of the CCICED."
         },
         {
-          logo: url("@/assets/img/prof/local_1.jpg"),
+          logo: require("../assets/img/prof/local_1.jpg"),
           title:
             "Prof. Wei LI, Zhejiang University",
           content:
             "The executive director of China Renewable Energy Society, director of the Special Committee of Ocean Energy, the expert judge of mechanical subject of the National Natural Science Foundation of China. Having more than 60 authorized invention patents at home and abroad."
         },
         {
-          logo: url("@/assets/img/prof/local_2.jpg"),
+          logo: require("../assets/img/prof/local_2.jpg"),
           title:
             "Dr. Yulin SI, Zhejiang University",
           content:
             "Mainly engaged in the research on offshore wind energy and marine energy, marine equipment intelligent control etc. He has been the PI for projects from Natural Science Foundation of China, China Shipbuilding Industry Corporation etc."
         },
         {
-          logo: url("@/assets/img/prof/local_3.jpg"),
+          logo: require("../assets/img/prof/local_3.jpg"),
           title:
             "Dr. Lin CUI, National Ocean Technology Center",
           content:
             "Dr. Cui from National Ocean Technology Center, is the deputy director of the ocean energy research office in National Ocean Technology Center. He is mainly engaged in the R&D and policy studies of ocean wave and tidal energy and their development in China."
         },
         {
-          logo: url("@/assets/img/prof/local_4.jpg"),
+          logo: require("../assets/img/prof/local_4.jpg"),
           title:
             "Prof. Dezhi NING, Dalian University of Technology",
           content:
             "Mainly engaged in the research on the characteristics of water waves and the interaction between water waves and ocean structures. Ppublished more than 140 academic papers in well-known journals and international conferences at home and abroad."
         },
         {
-          logo: url("@/assets/img/prof/local_5.jpg"),
+          logo: require("../assets/img/prof/local_5.jpg"),
           title:
             "Prof. Hongda SHI, Ocean University of China",
           content:
@@ -351,22 +352,22 @@ export default {
       benefitMsg,
       benefitsList: [
         {
-          logo: url("@/assets/img/icon/conference.png"),
+          logo: require("../assets/img/icon/conference.png"),
           title: "Date & Location",
           content: "<p>On September 11-15 of 2022</p>At Hangzhou city in China"
         },
         {
-          logo: url("@/assets/img/icon/speakers.png"),
+          logo: require("../assets/img/icon/speakers.png"),
           title: "Conference Speakers",
           content: "<p>Five keynote speakers</p>Four invited speakers"
         },
         {
-          logo: require("@/assets/img/icon/tours.png"),
+          logo: require("../assets/img/icon/tours.png"),
           title: "Special Tours Planned",
           content: "<p>The ZJU Zhoushan Campus</p>Zhairuoshan Scientific Island"
         },
         {
-          logo: require("@/assets/img/icon/register.png"),
+          logo: require("../assets/img/icon/register.png"),
           title: "Regular or Student",
           content: "<p>650 USD (about 4652 CNY)</p>300 USD (about 2147 CNY)"
         }
@@ -837,7 +838,7 @@ export default {
 <!--                <img class="center-block" :src="item.logo" alt="logo">-->
 <!--              </div>-->
 <!--              <div class="committee-quote">-->
-<!--                <img src="@/assets/img/quote.png" alt="引号">-->
+<!--                <img src="../assets/img/quote.png" alt="引号">-->
 <!--              </div>-->
 <!--              <div class="committee-description">-->
 <!--                <small>{{ item.content }}</small>-->
@@ -855,7 +856,7 @@ export default {
 <!--              <img class="center-block" :src="item.logo" alt="logo">-->
 <!--            </div>-->
 <!--            <div class="committee-quote">-->
-<!--              <img src="@/assets/img/quote.png" alt="引号">-->
+<!--              <img src="../assets/img/quote.png" alt="引号">-->
 <!--            </div>-->
 <!--            <div class="committee-description">-->
 <!--              <small>{{ item.content }}</small>-->

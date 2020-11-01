@@ -1,7 +1,7 @@
 <template>
   <div id="footer" class="container-fluid">
     <div class="logo">
-      <img src="@/assets/img/logo_column_white@0,25x.png" alt="logo">
+      <img src="../assets/img/logo_column_white@0,25x.png" alt="logo">
     </div>
     <p class="title">Contact Us in following ways</p>
     <p class="address_tel_fax">

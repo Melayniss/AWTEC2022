@@ -24,7 +24,7 @@
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-        <img class="img-responsive" src="@/assets/img/other/position.png" alt="Position Static Map">
+        <img class="img-responsive" src="../assets/img/other/position.png" alt="Position Static Map">
       </div>
     </div>
 
@@ -79,28 +79,28 @@ export default {
       venueMsg,
       photosList: [
         {
-          imgSrc1: url("@/assets/img/scene/hotel_1.jpg"),
-          imgSrc2: url("@/assets/img/scene/hotel_2.jpeg"),
+          imgSrc1: require("../assets/img/scene/hotel_1.jpg"),
+          imgSrc2: require("../assets/img/scene/hotel_2.jpeg"),
           title: 'Panoramic Overview'
         },
         {
-          imgSrc1: url("@/assets/img/scene/hotel_7.jpg"),
-          imgSrc2: url("@/assets/img/scene/hotel_8.jpg"),
+          imgSrc1: require("../assets/img/scene/hotel_7.jpg"),
+          imgSrc2: require("../assets/img/scene/hotel_8.jpg"),
           title: 'Yard and Cafeteria'
         },
         {
-          imgSrc1: url("@/assets/img/scene/hotel_4.jpg"),
-          imgSrc2: url("@/assets/img/scene/hotel_5.jpg"),
+          imgSrc1: require("../assets/img/scene/hotel_4.jpg"),
+          imgSrc2: require("../assets/img/scene/hotel_5.jpg"),
           title: 'Conference Center'
         },
         {
-          imgSrc1: url("@/assets/img/scene/hotel_6.jpg"),
-          imgSrc2: url("@/assets/img/scene/hotel_3.jpg"),
+          imgSrc1: require("../assets/img/scene/hotel_6.jpg"),
+          imgSrc2: require("../assets/img/scene/hotel_3.jpg"),
           title: 'Courtyard Restaurant'
         },
         {
-          imgSrc1: url("@/assets/img/scene/hotel_9.jpg"),
-          imgSrc2: url("@/assets/img/scene/hotel_10.jpg"),
+          imgSrc1: require("../assets/img/scene/hotel_9.jpg"),
+          imgSrc2: require("../assets/img/scene/hotel_10.jpg"),
           title: 'Chinese Classical Charm'
         },
       ],
@@ -116,7 +116,7 @@ export default {
   font-size: 30px;
   height: 150px;
   line-height: 150px;
-  background-image: url('../assets/img/banners/banner_3.jpg');
+  background-image: url("../assets/img/banners/banner_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
