@@ -190,75 +190,75 @@ export default {
           content: 'The 6th AWTEC will be held at Hangzhou city in China.',
           subContent: 'On September 11-15 of 2022.',
         },
-        {
-          img: require("../assets/img/scene/zju_1.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-        },
-        {
-          img: require("../assets/img/scene/zju_2.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-        },
-        {
-          img: require("../assets/img/scene/zju_3.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-        },
-        {
-          img: require("../assets/img/scene/zju_4.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-          // content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
-        },
-        {
-          img: require("../assets/img/scene/zju_5.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-        },
-        {
-          img: require("../assets/img/scene/zju_6.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-        },
-        {
-          img: require("../assets/img/scene/zju_3.jpg"),
-          path: "",
-          title: 'Zhejiang University',
-          // content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
-        },
-        {
-          img: require("../assets/img/scene/oc_1.jpg"),
-          path: "",
-          title: 'Ocean College, Zhejiang University'
-        },
-        {
-          img: require("../assets/img/scene/oc_2.jpg"),
-          path: "",
-          title: 'Ocean College, Zhejiang University'
-        },
-        {
-          img: require("../assets/img/scene/oc_3.jpg"),
-          path: "",
-          title: 'Ocean College, Zhejiang University'
-        },
-        {
-          img: require("../assets/img/scene/oc_5.jpg"),
-          path: "",
-          title: 'Ocean College, Zhejiang University'
-        },
-        {
-          img: require("../assets/img/scene/oc_6.jpg"),
-          path: "",
-          title: 'Ocean College, Zhejiang University'
-        },
-        {
-          img: require("../assets/img/scene_6.jpg"),
-          // path: "",
-          title: 'Hangzhou',
-          // content: 'The capital and the most popular city of Zhejiang Province.',
-          // subContent: 'Also romanized as Hangchow.'
-        },
+        // {
+        //   img: require("../assets/img/scene/zju_1.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_2.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_3.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_4.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        //   // content: 'Ranks among the top 3 on Chinese mainland, within the top 100 in the THE WRR and QS World University Rankings.',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_5.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_6.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        // },
+        // {
+        //   img: require("../assets/img/scene/zju_3.jpg"),
+        //   path: "",
+        //   title: 'Zhejiang University',
+        //   // content: 'Working on the ocean energy harvesting technology, and made significant contributions in the China ocean energy development.',
+        // },
+        // {
+        //   img: require("../assets/img/scene/oc_1.jpg"),
+        //   path: "",
+        //   title: 'Ocean College, Zhejiang University'
+        // },
+        // {
+        //   img: require("../assets/img/scene/oc_2.jpg"),
+        //   path: "",
+        //   title: 'Ocean College, Zhejiang University'
+        // },
+        // {
+        //   img: require("../assets/img/scene/oc_3.jpg"),
+        //   path: "",
+        //   title: 'Ocean College, Zhejiang University'
+        // },
+        // {
+        //   img: require("../assets/img/scene/oc_5.jpg"),
+        //   path: "",
+        //   title: 'Ocean College, Zhejiang University'
+        // },
+        // {
+        //   img: require("../assets/img/scene/oc_6.jpg"),
+        //   path: "",
+        //   title: 'Ocean College, Zhejiang University'
+        // },
+        // {
+        //   img: require("../assets/img/scene_6.jpg"),
+        //   // path: "",
+        //   title: 'Hangzhou',
+        //   // content: 'The capital and the most popular city of Zhejiang Province.',
+        //   // subContent: 'Also romanized as Hangchow.'
+        // },
       ],
 
       development,
